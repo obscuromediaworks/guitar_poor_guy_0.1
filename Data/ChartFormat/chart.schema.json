@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://guitar-poor-guy.dev/chart.schema.json",
+  "title": "Rhythm Chart",
+  "type": "object",
+  "required": ["formatVersion", "songId", "bpm", "notes"],
+  "properties": {
+    "formatVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "songId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "bpm": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "offsetMs": {
+      "type": "number",
+      "default": 0
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["timeMs", "lane", "type"],
+        "properties": {
+          "timeMs": { "type": "number", "minimum": 0 },
+          "lane": { "type": "integer", "minimum": 0, "maximum": 4 },
+          "type": {
+            "type": "string",
+            "enum": ["tap", "sustain", "chord"]
+          },
+          "durationMs": {
+            "type": "number",
+            "minimum": 0
+          },
+          "chordLanes": {
+            "type": "array",
+            "items": { "type": "integer", "minimum": 0, "maximum": 4 },
+            "minItems": 2,
+            "uniqueItems": true
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "type": { "const": "sustain" } }
+            },
+            "then": {
+              "required": ["durationMs"]
+            }
+          },
+          {
+            "if": {
+              "properties": { "type": { "const": "chord" } }
+            },
+            "then": {
+              "required": ["chordLanes"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

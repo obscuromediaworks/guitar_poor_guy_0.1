@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{140B2A81-9E96-493E-B8DE-B2B5A4BA224C}" SchemaVersion="133">
+	<Attenuations>
+		<WorkUnit Name="Default Work Unit" ID="{140B2A81-9E96-493E-B8DE-B2B5A4BA224C}" PersistMode="Standalone"/>
+	</Attenuations>
+</WwiseDocument>

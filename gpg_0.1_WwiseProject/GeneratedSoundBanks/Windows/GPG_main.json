@@ -1,0 +1,21 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "531985781",
+    "Type": "User",
+    "GUID": "{03B1CB12-A7CB-4F09-9056-2038B27FC447}",
+    "Language": "SFX",
+    "Hash": "{59B0E6F5-E3D4-3747-7984-3ADC277C12A8}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\GPG_main",
+    "ShortName": "GPG_main",
+    "Path": "GPG_main.bnk"
+   }
+  ],
+  "FileHash": "{91AB2D65-D22E-F72C-C029-FAA0E670D48B}"
+ }
+}

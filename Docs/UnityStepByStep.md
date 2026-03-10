@@ -33,6 +33,8 @@ Se añadieron scripts en:
    - `Audio Service Behaviour` = `AudioService` (componente `NullAudioService`)
    - `Lane Input Source Behaviour` = `LaneInputSource`
 
+> Nota: si olvidas asignar `Lane Input Source Behaviour`, `SongSessionController` intentará auto-detectar uno en la escena y, si no encuentra, añadirá un `KeyboardLaneInputSource` como fallback.
+
 ## 4) Configurar Input Actions (opcional, recomendado)
 
 Si usas `InputSystemLaneInputSource`:

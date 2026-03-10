@@ -30,10 +30,13 @@ namespace GuitarPoorGuy.Gameplay.Session
         private ILaneInputSource _laneInputSource;
         private int[] _laneCursor;
 
+        private void Awake()
+        {
+            ResolveReferences();
+        }
+
         private void Start()
         {
-            _audioService = audioServiceBehaviour as IAudioService;
-            _laneInputSource = laneInputSourceBehaviour as ILaneInputSource;
             _judge = new HitJudge(perfectWindowMs, goodWindowMs);
             _score = new ScoreSystem();
             _chart = ChartLoader.FromJson(chartSource != null ? chartSource.chartJson : string.Empty);
@@ -46,7 +49,14 @@ namespace GuitarPoorGuy.Gameplay.Session
 
             if (_laneInputSource == null)
             {
-                Debug.LogError("Lane input source is missing or does not implement ILaneInputSource.");
+                Debug.LogError("Lane input source is missing. Assign one in inspector or add KeyboardLaneInputSource/InputSystemLaneInputSource in scene.");
+                enabled = false;
+                return;
+            }
+
+            if (timeSource == null)
+            {
+                Debug.LogError("SongTimeSource is missing. Add one to scene and assign it in SongSessionController.");
                 enabled = false;
                 return;
             }
@@ -62,6 +72,72 @@ namespace GuitarPoorGuy.Gameplay.Session
             {
                 HandleLane(lane);
             }
+        }
+
+        private void ResolveReferences()
+        {
+            _audioService = audioServiceBehaviour as IAudioService;
+            _laneInputSource = laneInputSourceBehaviour as ILaneInputSource;
+
+            if (timeSource == null)
+            {
+                timeSource = FindFirstObjectByType<SongTimeSource>();
+            }
+
+            if (_audioService == null)
+            {
+                _audioService = GetComponent<IAudioService>() ?? FindAudioServiceInScene();
+                if (_audioService is MonoBehaviour audioBehaviour)
+                {
+                    audioServiceBehaviour = audioBehaviour;
+                }
+            }
+
+            if (_laneInputSource == null)
+            {
+                _laneInputSource = GetComponent<ILaneInputSource>() ?? FindLaneInputSourceInScene();
+                if (_laneInputSource is MonoBehaviour inputBehaviour)
+                {
+                    laneInputSourceBehaviour = inputBehaviour;
+                }
+            }
+
+            if (_laneInputSource == null)
+            {
+                var fallback = gameObject.AddComponent<KeyboardLaneInputSource>();
+                _laneInputSource = fallback;
+                laneInputSourceBehaviour = fallback;
+                Debug.LogWarning("No lane input source assigned/found. Added KeyboardLaneInputSource fallback to SongSessionController GameObject.");
+            }
+        }
+
+
+        private static IAudioService FindAudioServiceInScene()
+        {
+            var behaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            for (var i = 0; i < behaviours.Length; i++)
+            {
+                if (behaviours[i] is IAudioService service)
+                {
+                    return service;
+                }
+            }
+
+            return null;
+        }
+
+        private static ILaneInputSource FindLaneInputSourceInScene()
+        {
+            var behaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            for (var i = 0; i < behaviours.Length; i++)
+            {
+                if (behaviours[i] is ILaneInputSource source)
+                {
+                    return source;
+                }
+            }
+
+            return null;
         }
 
         private void HandleLane(int lane)

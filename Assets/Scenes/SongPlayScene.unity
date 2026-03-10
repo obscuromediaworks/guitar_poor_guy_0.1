@@ -474,6 +474,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1352548197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1352548200}
+  - component: {fileID: 1352548201}
+  m_Layer: 0
+  m_Name: LaneInputSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1352548200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352548197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1352548201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352548197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0db486aac9b47f54094559898a738585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.Gameplay.Input.KeyboardLaneInputSource
+  lane0: 15
+  lane1: 33
+  lane2: 18
+  lane3: 20
+  lane4: 21
 --- !u!1 &2094890989
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,6 +555,7 @@ MonoBehaviour:
   chartSource: {fileID: 11400000, guid: c2bf5e360d8c454488302278e5a7eb35, type: 2}
   timeSource: {fileID: 2130190452}
   audioServiceBehaviour: {fileID: 904458088}
+  laneInputSourceBehaviour: {fileID: 1352548201}
   perfectWindowMs: 40
   goodWindowMs: 90
 --- !u!4 &2094890991
@@ -579,3 +629,4 @@ SceneRoots:
   - {fileID: 2130190453}
   - {fileID: 904458089}
   - {fileID: 2094890991}
+  - {fileID: 1352548200}

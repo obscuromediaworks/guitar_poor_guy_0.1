@@ -9,6 +9,7 @@ Se añadieron scripts en:
 - `Assets/Gameplay/Runtime/Data`
 - `Assets/Gameplay/Runtime/System`
 - `Assets/Gameplay/Runtime/Session`
+- `Assets/Gameplay/Runtime/Input`
 - `Assets/Audio/Runtime`
 
 ## 2) Crear assets de datos
@@ -22,19 +23,32 @@ Se añadieron scripts en:
 1. Crea escena `SongPlayScene`.
 2. Crea GameObject `SongTimeSource` y añade componente `SongTimeSource`.
 3. Crea GameObject `AudioService` y añade `NullAudioService` (temporal hasta conectar Wwise real).
-4. Crea GameObject `SongSessionController` y añade componente `SongSessionController`.
-5. En el inspector de `SongSessionController` asigna:
+4. Crea GameObject `LaneInputSource` y añade uno de estos componentes:
+   - `KeyboardLaneInputSource` (rápido, sin Input Actions).
+   - `InputSystemLaneInputSource` (recomendado para escalar con gamepad/rebinds).
+5. Crea GameObject `SongSessionController` y añade componente `SongSessionController`.
+6. En el inspector de `SongSessionController` asigna:
    - `Chart Source` = `Chart_song_001`
    - `Time Source` = `SongTimeSource`
    - `Audio Service Behaviour` = `AudioService` (componente `NullAudioService`)
+   - `Lane Input Source Behaviour` = `LaneInputSource`
 
-## 4) Prueba rápida de gameplay
+## 4) Configurar Input Actions (opcional, recomendado)
+
+Si usas `InputSystemLaneInputSource`:
+1. Crea `Input Actions Asset` (ej. `GameplayInputActions`).
+2. Action Map `Gameplay`.
+3. Acciones tipo Button: `Lane0..Lane4`.
+4. Bindings teclado (ejemplo): A,S,D,F,G.
+5. Asigna cada acción en el array `laneActions` del componente.
+
+## 5) Prueba rápida de gameplay
 
 1. Play Mode.
-2. Presiona teclas `A,S,D,F,G` siguiendo timestamps aproximados del chart.
+2. Presiona carriles siguiendo timestamps aproximados del chart.
 3. Verifica en consola logs de hit y combo.
 
-## 5) Conectar Wwise real (siguiente paso)
+## 6) Conectar Wwise real (siguiente paso)
 
 Sustituye `NullAudioService` por un `WwiseAudioService`:
 - `PlaySong(songId)` -> `AkSoundEngine.PostEvent("Play_Music_<SongId>", gameObject)`
@@ -42,6 +56,6 @@ Sustituye `NullAudioService` por un `WwiseAudioService`:
 - `PlayHit(quality)` -> mapear `Perfect/Good/Miss` a switch/evento
 - `SetComboIntensity(value)` -> RTPC `RTPC_Player_ComboIntensity`
 
-## 6) Recomendación inmediata
+## 7) Recomendación inmediata
 
 Antes de UI/VFX, valida sincronía con una sola canción de 60-90s y calibra ventanas (`perfectWindowMs`, `goodWindowMs`) + offset.

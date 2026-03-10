@@ -1,6 +1,7 @@
 using GuitarPoorGuy.Audio;
 using GuitarPoorGuy.Core.Time;
 using GuitarPoorGuy.Gameplay.Data;
+using GuitarPoorGuy.Gameplay.Input;
 using GuitarPoorGuy.Gameplay.Systems;
 using UnityEngine;
 
@@ -8,12 +9,15 @@ namespace GuitarPoorGuy.Gameplay.Session
 {
     public sealed class SongSessionController : MonoBehaviour
     {
+        private const int LaneCount = 5;
+
         [Header("Data")]
         [SerializeField] private ChartSource chartSource;
 
         [Header("Refs")]
         [SerializeField] private SongTimeSource timeSource;
         [SerializeField] private MonoBehaviour audioServiceBehaviour;
+        [SerializeField] private MonoBehaviour laneInputSourceBehaviour;
 
         [Header("Judge Windows")]
         [SerializeField] private double perfectWindowMs = 40;
@@ -23,11 +27,13 @@ namespace GuitarPoorGuy.Gameplay.Session
         private HitJudge _judge;
         private ScoreSystem _score;
         private IAudioService _audioService;
+        private ILaneInputSource _laneInputSource;
         private int[] _laneCursor;
 
         private void Start()
         {
             _audioService = audioServiceBehaviour as IAudioService;
+            _laneInputSource = laneInputSourceBehaviour as ILaneInputSource;
             _judge = new HitJudge(perfectWindowMs, goodWindowMs);
             _score = new ScoreSystem();
             _chart = ChartLoader.FromJson(chartSource != null ? chartSource.chartJson : string.Empty);
@@ -38,23 +44,29 @@ namespace GuitarPoorGuy.Gameplay.Session
                 return;
             }
 
-            _laneCursor = new int[5];
+            if (_laneInputSource == null)
+            {
+                Debug.LogError("Lane input source is missing or does not implement ILaneInputSource.");
+                enabled = false;
+                return;
+            }
+
+            _laneCursor = new int[LaneCount];
             timeSource.Reset(_chart.offsetMs);
             _audioService?.PlaySong(_chart.songId);
         }
 
         private void Update()
         {
-            HandleLane(0, KeyCode.A);
-            HandleLane(1, KeyCode.S);
-            HandleLane(2, KeyCode.D);
-            HandleLane(3, KeyCode.F);
-            HandleLane(4, KeyCode.G);
+            for (var lane = 0; lane < LaneCount; lane++)
+            {
+                HandleLane(lane);
+            }
         }
 
-        private void HandleLane(int lane, KeyCode key)
+        private void HandleLane(int lane)
         {
-            if (!Input.GetKeyDown(key))
+            if (!_laneInputSource.WasLanePressedThisFrame(lane))
             {
                 return;
             }

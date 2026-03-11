@@ -61,3 +61,8 @@ Sustituye `NullAudioService` por un `WwiseAudioService`:
 ## 7) Recomendación inmediata
 
 Antes de UI/VFX, valida sincronía con una sola canción de 60-90s y calibra ventanas (`perfectWindowMs`, `goodWindowMs`) + offset.
+
+
+## 8) HUD básica para playtest
+
+Sigue `Docs/UnityUIStepByStep.md` para montar la UI mínima (score/combo/multiplicador/último hit/tiempo) y validar rápidamente la sensación de juego.

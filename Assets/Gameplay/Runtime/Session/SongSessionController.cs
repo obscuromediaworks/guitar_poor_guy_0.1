@@ -30,6 +30,12 @@ namespace GuitarPoorGuy.Gameplay.Session
         private ILaneInputSource _laneInputSource;
         private int[] _laneCursor;
 
+        public int CurrentScore => _score != null ? _score.Score : 0;
+        public int CurrentCombo => _score != null ? _score.Combo : 0;
+        public int CurrentMultiplier => _score != null ? _score.Multiplier : 1;
+        public HitQuality LastHitQuality { get; private set; } = HitQuality.Miss;
+        public double CurrentSongTimeMs => timeSource != null ? timeSource.SongTimeMs : 0;
+
         private void Awake()
         {
             ResolveReferences();
@@ -176,6 +182,7 @@ namespace GuitarPoorGuy.Gameplay.Session
 
         private void Register(HitQuality quality)
         {
+            LastHitQuality = quality;
             _score.Register(quality);
             _audioService?.PlayHit(quality);
             _audioService?.SetComboIntensity(_score.Combo / 100f);

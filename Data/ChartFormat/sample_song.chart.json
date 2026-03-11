@@ -1,0 +1,17 @@
+{
+  "formatVersion": 1,
+  "songId": "song_001",
+  "bpm": 120,
+  "offsetMs": 0,
+  "notes": [
+    { "timeMs": 1000, "lane": 0, "type": "tap" },
+    { "timeMs": 1500, "lane": 1, "type": "tap" },
+    { "timeMs": 2000, "lane": 2, "type": "sustain", "durationMs": 750 },
+    {
+      "timeMs": 3200,
+      "lane": 0,
+      "type": "chord",
+      "chordLanes": [0, 3]
+    }
+  ]
+}

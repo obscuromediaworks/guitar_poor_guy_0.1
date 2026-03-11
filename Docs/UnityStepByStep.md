@@ -17,6 +17,8 @@ Se añadieron scripts en:
 1. En Unity: `Assets > Create > GuitarPoorGuy > Chart Source`.
 2. Nómbralo `Chart_song_001`.
 3. Copia el JSON de `Data/ChartFormat/sample_song.chart.json` dentro de `chartJson`.
+4. En Unity: `Assets > Create > GuitarPoorGuy > Song Definition`.
+5. Nómbralo `Song_song_001` y asigna `songId = song_001` + `chartSource = Chart_song_001`.
 
 ## 3) Preparar escena SongPlayScene
 
@@ -28,7 +30,8 @@ Se añadieron scripts en:
    - `InputSystemLaneInputSource` (recomendado para escalar con gamepad/rebinds).
 5. Crea GameObject `SongSessionController` y añade componente `SongSessionController`.
 6. En el inspector de `SongSessionController` asigna:
-   - `Chart Source` = `Chart_song_001`
+   - `Song Definition` = `Song_song_001` (recomendado)
+   - `Chart Source` = `Chart_song_001` (fallback si no usas SongDefinition)
    - `Time Source` = `SongTimeSource`
    - `Audio Service Behaviour` = `AudioService` (componente `NullAudioService`)
    - `Lane Input Source Behaviour` = `LaneInputSource`
@@ -66,3 +69,8 @@ Antes de UI/VFX, valida sincronía con una sola canción de 60-90s y calibra ven
 ## 8) HUD básica para playtest
 
 Sigue `Docs/UnityUIStepByStep.md` para montar la UI mínima (score/combo/multiplicador/último hit/tiempo) y validar rápidamente la sensación de juego.
+
+
+## 9) Pipeline por canción
+
+Sigue `Docs/SongAuthoringStepByStep.md` para alinear Wwise (audio) + chart (gameplay) + SongDefinition (vínculo en Unity).

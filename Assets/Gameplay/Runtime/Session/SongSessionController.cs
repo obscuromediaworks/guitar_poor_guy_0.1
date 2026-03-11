@@ -12,6 +12,7 @@ namespace GuitarPoorGuy.Gameplay.Session
         private const int LaneCount = 5;
 
         [Header("Data")]
+        [SerializeField] private SongDefinition songDefinition;
         [SerializeField] private ChartSource chartSource;
 
         [Header("Refs")]
@@ -29,6 +30,7 @@ namespace GuitarPoorGuy.Gameplay.Session
         private IAudioService _audioService;
         private ILaneInputSource _laneInputSource;
         private int[] _laneCursor;
+        private string _activeSongId;
 
         public int CurrentScore => _score != null ? _score.Score : 0;
         public int CurrentCombo => _score != null ? _score.Combo : 0;
@@ -45,13 +47,19 @@ namespace GuitarPoorGuy.Gameplay.Session
         {
             _judge = new HitJudge(perfectWindowMs, goodWindowMs);
             _score = new ScoreSystem();
-            _chart = ChartLoader.FromJson(chartSource != null ? chartSource.chartJson : string.Empty);
+            var resolvedChartSource = songDefinition != null && songDefinition.chartSource != null
+                ? songDefinition.chartSource
+                : chartSource;
+
+            _chart = ChartLoader.FromJson(resolvedChartSource != null ? resolvedChartSource.chartJson : string.Empty);
 
             if (_chart == null)
             {
                 enabled = false;
                 return;
             }
+
+            _activeSongId = ResolveSongId();
 
             if (_laneInputSource == null)
             {
@@ -69,7 +77,7 @@ namespace GuitarPoorGuy.Gameplay.Session
 
             _laneCursor = new int[LaneCount];
             timeSource.Reset(_chart.offsetMs);
-            _audioService?.PlaySong(_chart.songId);
+            _audioService?.PlaySong(_activeSongId);
         }
 
         private void Update()
@@ -146,6 +154,21 @@ namespace GuitarPoorGuy.Gameplay.Session
             return null;
         }
 
+        private string ResolveSongId()
+        {
+            if (songDefinition != null && !string.IsNullOrWhiteSpace(songDefinition.songId))
+            {
+                return songDefinition.songId;
+            }
+
+            if (_chart != null && !string.IsNullOrWhiteSpace(_chart.songId))
+            {
+                return _chart.songId;
+            }
+
+            return "song_001";
+        }
+
         private void HandleLane(int lane)
         {
             if (!_laneInputSource.WasLanePressedThisFrame(lane))
@@ -192,7 +215,7 @@ namespace GuitarPoorGuy.Gameplay.Session
         {
             if (_chart != null)
             {
-                _audioService?.StopSong(_chart.songId);
+                _audioService?.StopSong(_activeSongId);
             }
         }
     }

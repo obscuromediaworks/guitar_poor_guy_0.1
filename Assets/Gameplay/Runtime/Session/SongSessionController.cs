@@ -37,6 +37,9 @@ namespace GuitarPoorGuy.Gameplay.Session
         public int CurrentMultiplier => _score != null ? _score.Multiplier : 1;
         public HitQuality LastHitQuality { get; private set; } = HitQuality.Miss;
         public double CurrentSongTimeMs => timeSource != null ? timeSource.SongTimeMs : 0;
+        public RhythmChart ActiveChart => _chart;
+        public bool IsSessionReady => _chart != null && timeSource != null;
+        public int LaneCountRuntime => LaneCount;
 
         private void Awake()
         {

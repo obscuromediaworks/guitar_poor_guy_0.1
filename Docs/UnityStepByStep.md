@@ -74,3 +74,8 @@ Sigue `Docs/UnityUIStepByStep.md` para montar la UI mínima (score/combo/multipl
 ## 9) Pipeline por canción
 
 Sigue `Docs/SongAuthoringStepByStep.md` para alinear Wwise (audio) + chart (gameplay) + SongDefinition (vínculo en Unity).
+
+
+## 10) Lanes + herramienta visual de charts
+
+Sigue `Docs/LanesAndChartToolStepByStep.md` para montar carriles visuales personalizables y usar la ventana de authoring de charts en el editor.

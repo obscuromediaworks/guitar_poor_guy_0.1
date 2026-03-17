@@ -44,3 +44,26 @@ Esta guía define dónde se configura cada cosa por canción:
 - [ ] Chart tiene notas válidas y offset calibrado.
 - [ ] Se reproduce audio correcto al iniciar sesión.
 - [ ] Input/hits corresponden a las notas del chart.
+
+
+## 6) Paso a paso Unity + Wwise para tu canción de 4 tracks
+
+1. Verifica que `songId` sea idéntico entre:
+   - `SongDefinition.songId`
+   - `chart.songId`
+   - evento Wwise `Play_Music_<songId>`
+2. En `SongSessionController` asigna tu `SongDefinition`.
+3. En tu `WwiseAudioService` implementa:
+   - `PlayLanePress(lane)` -> `Play_SFX_LanePress`
+   - `PlayStrum(quality)` -> `Play_SFX_Strum` para Good/Perfect
+   - `SetGuitarTrackLevel(normalized)` -> `RTPC_Music_GuitarLayer`
+4. En juego, valida:
+   - al presionar tecla siempre suena lane press
+   - al acertar suena strum
+   - el track de guitarra sube al acertar y baja al fallar
+5. Ajusta la sensibilidad musical:
+   - Good = 0.7
+   - Perfect = 1.0
+   - Miss = 0.1
+
+Esto te da el efecto de “guitarra del jugador” sobre el backing track.

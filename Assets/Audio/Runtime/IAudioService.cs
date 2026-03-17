@@ -8,6 +8,8 @@ namespace GuitarPoorGuy.Audio
         void StopSong(string songId);
         void PlayHit(HitQuality quality);
         void PlayLanePress(int lane);
+        void PlayStrum(HitQuality quality);
         void SetComboIntensity(float normalized);
+        void SetGuitarTrackLevel(float normalized);
     }
 }

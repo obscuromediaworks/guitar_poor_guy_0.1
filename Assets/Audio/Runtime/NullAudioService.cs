@@ -25,9 +25,19 @@ namespace GuitarPoorGuy.Audio
             Debug.Log($"[NullAudioService] LanePress lane={lane}");
         }
 
+        public void PlayStrum(HitQuality quality)
+        {
+            Debug.Log($"[NullAudioService] Strum quality={quality}");
+        }
+
         public void SetComboIntensity(float normalized)
         {
             Debug.Log($"[NullAudioService] Combo RTPC {normalized:0.00}");
+        }
+
+        public void SetGuitarTrackLevel(float normalized)
+        {
+            Debug.Log($"[NullAudioService] GuitarTrackLevel {normalized:0.00}");
         }
     }
 }

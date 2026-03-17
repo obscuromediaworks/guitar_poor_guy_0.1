@@ -1,3 +1,4 @@
+using System;
 using GuitarPoorGuy.Audio;
 using GuitarPoorGuy.Core.Time;
 using GuitarPoorGuy.Gameplay.Data;
@@ -36,6 +37,9 @@ namespace GuitarPoorGuy.Gameplay.Session
         private ILaneInputSource _laneInputSource;
         private int[] _laneCursor;
         private string _activeSongId;
+
+        public event Action<int, HitQuality> LaneNoteConsumed;
+        public event Action SessionRestarted;
 
         public int CurrentScore => _score != null ? _score.Score : 0;
         public int CurrentCombo => _score != null ? _score.Combo : 0;
@@ -135,7 +139,6 @@ namespace GuitarPoorGuy.Gameplay.Session
             }
         }
 
-
         private static IAudioService FindAudioServiceInScene()
         {
             var behaviours = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
@@ -209,6 +212,8 @@ namespace GuitarPoorGuy.Gameplay.Session
             _laneCursor = new int[LaneCount];
             timeSource.Reset(_chart.offsetMs);
             _audioService?.PlaySong(_activeSongId);
+            _audioService?.SetGuitarTrackLevel(0f);
+            SessionRestarted?.Invoke();
         }
 
         private void HandleLane(int lane)
@@ -230,6 +235,7 @@ namespace GuitarPoorGuy.Gameplay.Session
             var quality = _judge.Evaluate(note.timeMs, timeSource.SongTimeMs);
             Register(quality);
             _laneCursor[lane]++;
+            LaneNoteConsumed?.Invoke(lane, quality);
         }
 
         private ChartNote FindNextNoteForLane(int lane)
@@ -253,6 +259,15 @@ namespace GuitarPoorGuy.Gameplay.Session
             _score.Register(quality);
             _audioService?.PlayHit(quality);
             _audioService?.SetComboIntensity(_score.Combo / 100f);
+
+            if (quality == HitQuality.Miss)
+            {
+                _audioService?.SetGuitarTrackLevel(0.1f);
+                return;
+            }
+
+            _audioService?.PlayStrum(quality);
+            _audioService?.SetGuitarTrackLevel(quality == HitQuality.Perfect ? 1f : 0.7f);
         }
 
         private void OnDisable()

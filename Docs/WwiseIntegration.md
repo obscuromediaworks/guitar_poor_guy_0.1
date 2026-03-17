@@ -8,6 +8,7 @@
 - `Play_SFX_Hit`
 - `Play_SFX_Miss`
 - `Play_SFX_LanePress`
+- `Play_SFX_Strum`
 - `Play_UI_Click`
 
 ### Buses
@@ -22,6 +23,7 @@
 ### RTPC
 - `RTPC_Player_ComboIntensity` (0-100)
 - `RTPC_Gameplay_Health` (0-100)
+- `RTPC_Music_GuitarLayer` (0-100)
 
 ### States / Switches
 - State Group `GameFlow`: `Menu`, `Gameplay`, `Pause`, `Results`
@@ -58,3 +60,24 @@
 - [ ] No hay warnings de banks faltantes al iniciar canción.
 - [ ] Volumen relativo Music/SFX/UI calibrado.
 - [ ] CPU audio estable durante secciones densas.
+
+
+## 7. Implementación recomendada para canción por tracks (guitarra/bajo/voz/batería)
+
+1. En Wwise, crea un Music Container con 4 tracks sincronizados: `Guitar`, `Bass`, `Vocal`, `Drums`.
+2. Deja `Guitar` con volumen base más bajo que los demás (como ya hiciste).
+3. Crea evento de input: `Play_SFX_LanePress` (cada pulsación).
+4. Crea evento de acierto: `Play_SFX_Strum` (solo Good/Perfect).
+5. Crea RTPC `RTPC_Music_GuitarLayer` y mapea el volumen del track `Guitar`:
+   - 0 = guitarra más baja
+   - 100 = guitarra destacada
+6. En Unity:
+   - `PlayLanePress(lane)` -> post event `Play_SFX_LanePress`.
+   - `PlayStrum(quality)` -> post event `Play_SFX_Strum` cuando quality != Miss.
+   - `SetGuitarTrackLevel(normalized)` -> set RTPC `RTPC_Music_GuitarLayer` (0..100).
+7. Lógica sugerida:
+   - Miss -> bajar RTPC de guitarra (ej. 10).
+   - Good -> subir a ~70.
+   - Perfect -> subir a ~100.
+
+Con esto el jugador percibe que “está tocando bien” porque la guitarra del tema gana presencia al acertar.

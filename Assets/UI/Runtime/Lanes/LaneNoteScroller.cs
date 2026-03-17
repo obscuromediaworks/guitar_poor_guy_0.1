@@ -15,33 +15,27 @@ namespace GuitarPoorGuy.UI.Lanes
 
         private readonly List<RectTransform> _activeNoteRects = new List<RectTransform>();
         private readonly List<float> _activeNoteTimes = new List<float>();
+        private readonly List<Queue<RectTransform>> _laneQueues = new List<Queue<RectTransform>>();
 
         private bool _built;
         private float _nextBuildAttemptTime;
 
+        private void OnEnable()
+        {
+            ResolveReferences();
+            SubscribeSessionEvents();
+        }
+
         private void Start()
         {
-            if (sessionController == null)
-            {
-                sessionController = FindFirstObjectByType<SongSessionController>();
-            }
-
-            if (laneLayoutController == null)
-            {
-                laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
-            }
-
-            if (countdownSequenceUI == null)
-            {
-                countdownSequenceUI = FindFirstObjectByType<CountdownSequenceUI>();
-            }
-
-            if (countdownSequenceUI != null && noteFallStartDelayMs <= 0f)
-            {
-                noteFallStartDelayMs = countdownSequenceUI.TotalDurationSeconds * 1000f;
-            }
-
+            ResolveReferences();
+            SubscribeSessionEvents();
             TryBuildNotes();
+        }
+
+        private void OnDisable()
+        {
+            UnsubscribeSessionEvents();
         }
 
         private void Update()
@@ -68,6 +62,11 @@ namespace GuitarPoorGuy.UI.Lanes
             for (var i = 0; i < _activeNoteRects.Count; i++)
             {
                 var noteRect = _activeNoteRects[i];
+                if (noteRect == null)
+                {
+                    continue;
+                }
+
                 var deltaMs = _activeNoteTimes[i] - nowMs;
                 var normalized = deltaMs / theme.noteLeadTimeMs;
                 var y = Mathf.Lerp(-theme.laneHeight * 0.45f, theme.noteTravelHeight * 0.5f, normalized);
@@ -87,6 +86,77 @@ namespace GuitarPoorGuy.UI.Lanes
             TryBuildNotes(force: true);
         }
 
+        private void ResolveReferences()
+        {
+            if (sessionController == null)
+            {
+                sessionController = FindFirstObjectByType<SongSessionController>();
+            }
+
+            if (laneLayoutController == null)
+            {
+                laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
+            }
+
+            if (countdownSequenceUI == null)
+            {
+                countdownSequenceUI = FindFirstObjectByType<CountdownSequenceUI>();
+            }
+
+            if (countdownSequenceUI != null && noteFallStartDelayMs <= 0f)
+            {
+                noteFallStartDelayMs = countdownSequenceUI.TotalDurationSeconds * 1000f;
+            }
+        }
+
+        private void SubscribeSessionEvents()
+        {
+            if (sessionController == null)
+            {
+                return;
+            }
+
+            sessionController.LaneNoteConsumed -= OnLaneNoteConsumed;
+            sessionController.LaneNoteConsumed += OnLaneNoteConsumed;
+            sessionController.SessionRestarted -= OnSessionRestarted;
+            sessionController.SessionRestarted += OnSessionRestarted;
+        }
+
+        private void UnsubscribeSessionEvents()
+        {
+            if (sessionController == null)
+            {
+                return;
+            }
+
+            sessionController.LaneNoteConsumed -= OnLaneNoteConsumed;
+            sessionController.SessionRestarted -= OnSessionRestarted;
+        }
+
+        private void OnSessionRestarted()
+        {
+            TryBuildNotes(force: true);
+        }
+
+        private void OnLaneNoteConsumed(int lane, Gameplay.Systems.HitQuality quality)
+        {
+            if (lane < 0 || lane >= _laneQueues.Count)
+            {
+                return;
+            }
+
+            if (_laneQueues[lane].Count == 0)
+            {
+                return;
+            }
+
+            var consumedNote = _laneQueues[lane].Dequeue();
+            if (consumedNote != null)
+            {
+                consumedNote.gameObject.SetActive(false);
+            }
+        }
+
         private void TryBuildNotesPeriodically()
         {
             if (Time.unscaledTime < _nextBuildAttemptTime)
@@ -100,15 +170,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
         private bool TryBuildNotes(bool force = false)
         {
-            if (sessionController == null)
-            {
-                sessionController = FindFirstObjectByType<SongSessionController>();
-            }
-
-            if (laneLayoutController == null)
-            {
-                laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
-            }
+            ResolveReferences();
 
             if (sessionController == null || laneLayoutController == null || laneLayoutController.Theme == null)
             {
@@ -141,6 +203,7 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             var theme = laneLayoutController.Theme;
+            EnsureLaneQueues(laneContainers.Count);
 
             for (var i = 0; i < chart.notes.Length; i++)
             {
@@ -167,10 +230,20 @@ namespace GuitarPoorGuy.UI.Lanes
 
                 _activeNoteRects.Add(noteRect);
                 _activeNoteTimes.Add(note.timeMs);
+                _laneQueues[note.lane].Enqueue(noteRect);
             }
 
             _built = _activeNoteRects.Count > 0;
             return _built;
+        }
+
+        private void EnsureLaneQueues(int laneCount)
+        {
+            _laneQueues.Clear();
+            for (var i = 0; i < laneCount; i++)
+            {
+                _laneQueues.Add(new Queue<RectTransform>());
+            }
         }
 
         private void ClearNotes()
@@ -194,6 +267,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
             _activeNoteRects.Clear();
             _activeNoteTimes.Clear();
+            _laneQueues.Clear();
             _built = false;
         }
     }

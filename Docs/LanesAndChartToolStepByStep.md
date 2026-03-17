@@ -35,7 +35,7 @@ Con esto puedes re-skinnear lanes sin tocar código.
 
 1. En el Canvas crea un `Text` centrado (`CountdownText`).
 2. Crea un objeto `CountdownSequenceUI` y añade el componente `CountdownSequenceUI`.
-3. Asigna `Countdown Text` = `CountdownText`.
+3. Asigna `Countdown Text` = `CountdownText` (UI Text) o usa un `TMP_Text` llamado `Countdown...`.
 4. Configura tiempos:
    - `Ready Duration Seconds`
    - `Pause Duration Seconds`
@@ -69,6 +69,8 @@ Con esto puedes re-skinnear lanes sin tocar código.
 
 
 ## 7) Troubleshooting
+
+- Si el countdown respeta el tiempo pero no se ve, verifica que el texto esté activo, con alpha visible y que `CountdownSequenceUI` apunte a `Text` o `TMP_Text`.
 
 - Si ves lanes pero sin notas, verifica que `SongSessionController` tenga `SongDefinition`/`ChartSource` válido y que el chart tenga `notes`.
 - En `LaneNoteScroller`, usa `Rebuild Notes` para forzar reconstrucción manual.

@@ -3,7 +3,28 @@
 	<Busses>
 		<WorkUnit Name="Default Work Unit" ID="{86053357-218C-4A56-A844-4304A3578226}" PersistMode="Standalone">
 			<ChildrenList>
-				<Bus Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+				<Bus Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{D9A8F214-D920-4416-929D-7D2EF619CACF}" WorkUnitID="{CBFBF873-CF29-4DF9-8956-C0C2D43307FC}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Bus_Music" ID="{7E911115-B92C-4B53-9916-FBD2D1BAF422}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{D9A8F214-D920-4416-929D-7D2EF619CACF}" WorkUnitID="{CBFBF873-CF29-4DF9-8956-C0C2D43307FC}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Bus_SFX" ID="{76849F53-85DB-4E59-99CB-21DC7B45A7F6}">
+					<ReferenceList>
+						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
+							<ObjectRef Name="System" ID="{D9A8F214-D920-4416-929D-7D2EF619CACF}" WorkUnitID="{CBFBF873-CF29-4DF9-8956-C0C2D43307FC}"/>
+						</Reference>
+					</ReferenceList>
+				</Bus>
+				<Bus Name="Bus_UI" ID="{003E28FE-52EE-43A0-AAA8-311C42099977}">
 					<ReferenceList>
 						<Reference Name="AudioDevice" PluginName="System" CompanyID="0" PluginID="174" PluginType="7">
 							<ObjectRef Name="System" ID="{D9A8F214-D920-4416-929D-7D2EF619CACF}" WorkUnitID="{CBFBF873-CF29-4DF9-8956-C0C2D43307FC}"/>

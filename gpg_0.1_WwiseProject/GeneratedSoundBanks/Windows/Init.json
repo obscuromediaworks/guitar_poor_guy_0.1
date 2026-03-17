@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{CDE9AC3D-2B42-1217-02C1-D64576EB9AF6}",
+    "Hash": "{52444182-F791-B136-6DC4-6A80548D5AAA}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -36,14 +36,100 @@
     },
     "Busses": [
      {
-      "Id": "2246998526",
-      "Name": "Main Audio Bus",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
+      "Id": "1162281553",
+      "Name": "Bus_Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Bus_Music",
+      "GUID": "{7E911115-B92C-4B53-9916-FBD2D1BAF422}"
+     },
+     {
+      "Id": "1746463750",
+      "Name": "Bus_UI",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Bus_UI",
+      "GUID": "{003E28FE-52EE-43A0-AAA8-311C42099977}"
+     },
+     {
+      "Id": "3895923845",
+      "Name": "Bus_SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Bus_SFX",
+      "GUID": "{76849F53-85DB-4E59-99CB-21DC7B45A7F6}"
+     },
+     {
+      "Id": "3964155266",
+      "Name": "Bus_Master",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Bus_Master",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "392736999",
+      "Name": "Gameflow",
+      "ObjectPath": "\\States\\Default Work Unit\\Gameflow",
+      "GUID": "{13FC7F06-117F-4893-84FD-CDBC97875DD7}",
+      "States": [
+       {
+        "Id": "89505537",
+        "Name": "Gameplay",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameflow\\Gameplay",
+        "GUID": "{95D78F21-9422-4A94-A55E-C928EA87857D}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameflow\\None",
+        "GUID": "{7E6CC3A4-A2E4-4F26-BF25-D55338A18E5C}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameflow\\Menu",
+        "GUID": "{F1133655-AFFE-458C-9BFF-81A0ABC3B171}"
+       },
+       {
+        "Id": "3092587493",
+        "Name": "Pause",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameflow\\Pause",
+        "GUID": "{F751FD3C-581E-4968-BA3A-EBEFADCFDEC8}"
+       },
+       {
+        "Id": "3780578133",
+        "Name": "Results",
+        "ObjectPath": "\\States\\Default Work Unit\\Gameflow\\Results",
+        "GUID": "{71775833-B665-446C-BD8E-9A706FCB6F96}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2990443",
+      "Name": "HitQuality",
+      "ObjectPath": "\\Switches\\Default Work Unit\\HitQuality",
+      "GUID": "{8482248B-CE38-4238-A274-59CFB6512F03}",
+      "Switches": [
+       {
+        "Id": "668632890",
+        "Name": "Good",
+        "ObjectPath": "\\Switches\\Default Work Unit\\HitQuality\\Good",
+        "GUID": "{62C7E77B-904F-4F88-89F0-9B008133FA37}"
+       },
+       {
+        "Id": "2161557176",
+        "Name": "Perfect",
+        "ObjectPath": "\\Switches\\Default Work Unit\\HitQuality\\Perfect",
+        "GUID": "{A7F90AEE-4BCB-4D94-A2C3-B01192887E02}"
+       },
+       {
+        "Id": "3062523241",
+        "Name": "Miss",
+        "ObjectPath": "\\Switches\\Default Work Unit\\HitQuality\\Miss",
+        "GUID": "{EE1BEC3D-C55E-484C-BF9E-9A9848481BDC}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{D937184F-3C45-67D3-B761-9A2D8469492D}"
+  "FileHash": "{1869EEC4-7C81-C9A8-891D-422498CA40C5}"
  }
 }

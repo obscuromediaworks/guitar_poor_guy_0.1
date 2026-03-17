@@ -1,5 +1,18 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	392736999	Gameflow			\Default Work Unit\Gameflow	
+
+State	ID	Name	State Group			Notes
+	89505537	Gameplay	Gameflow			
+	748895195	None	Gameflow			
+	2607556080	Menu	Gameflow			
+	3092587493	Pause	Gameflow			
+	3780578133	Results	Gameflow			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
+	1162281553	Bus_Music			\Default Work Unit\Bus_Music	
+	1746463750	Bus_UI			\Default Work Unit\Bus_UI	
+	3895923845	Bus_SFX			\Default Work Unit\Bus_SFX	
+	3964155266	Bus_Master			\Default Work Unit\Bus_Master	
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

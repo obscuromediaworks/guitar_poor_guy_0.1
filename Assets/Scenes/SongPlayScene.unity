@@ -934,7 +934,7 @@ MonoBehaviour:
   goText: GO!
   readyDurationSeconds: 2
   pauseDurationSeconds: 0.5
-  goDurationSeconds: 0.8
+  goDurationSeconds: 2
 --- !u!1 &904458087
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,8 +1628,10 @@ MonoBehaviour:
   timeSource: {fileID: 2130190452}
   audioServiceBehaviour: {fileID: 904458088}
   laneInputSourceBehaviour: {fileID: 1352548201}
-  perfectWindowMs: 40
-  goodWindowMs: 90
+  enableQuickRestart: 1
+  restartKey: 32
+  perfectWindowMs: 60
+  goodWindowMs: 120
 --- !u!4 &2094890991
 Transform:
   m_ObjectHideFlags: 0

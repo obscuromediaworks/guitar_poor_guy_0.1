@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "gpg_0.1_WwiseProject",
+   "GUID": "{3C3BEA98-FB41-4F8A-AA59-0EC7A33D7583}",
+   "Generator": "2025.1.3.9039"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Mac",
+    "GUID": "{B019DB24-06C7-48ED-8A07-DB0AAEF9991D}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "Mac"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{C087A09B-625F-4C80-902B-7A36D43B39FA}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{16AE2CF4-930D-4969-AE36-686CBA66955D}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{A1ACF8A4-F8B4-D3C9-9D67-643DEFBCC97C}"
+ }
+}

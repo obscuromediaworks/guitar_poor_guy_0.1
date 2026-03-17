@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Songs" ID="{115DA8C4-4B25-4EAA-817A-B6DD966C143D}" ShortID="569961486">
+					<ChildrenList>
+						<MusicSegment Name="Incubus_Privilege" ID="{FAEF3C82-C470-48EE-87E7-B2D5B46DC0CE}" ShortID="523496055">
+							<PropertyList>
+								<Property Name="EndPosition" Type="Real64" Value="232000"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="Incubus_Privilege_bass" ID="{ADBC2018-746D-468F-BA7F-7FFCB5D777F0}" ShortID="966871309">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{FF10E710-5008-4DE0-A409-E90C7FE008DE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Incubus_Privilege_bass" ID="{9F4F8CF7-EAC8-45D5-B565-35A888081E04}">
+											<Language>SFX</Language>
+											<AudioFile>Incubus_Privilege_bass.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="317264215"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{182BFD52-09E2-4412-9B34-3CE08AE46E8A}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Incubus_Privilege_bass" ID="{3D769FF1-028B-43B4-9071-19B6DA4CDF52}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="232000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Incubus_Privilege_bass" ID="{9F4F8CF7-EAC8-45D5-B565-35A888081E04}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Incubus_Privilege_drums" ID="{712838CC-1AB7-48B7-8F05-D038A80F4D8B}" ShortID="586040358">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{061F0FBF-2B9F-4217-B750-4EC3EBD2EC2F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Incubus_Privilege_drums" ID="{D30E4003-8F65-44AE-BABE-123C20D22AA1}">
+											<Language>SFX</Language>
+											<AudioFile>Incubus_Privilege_drums.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="938802729"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{8D706D7F-9C3D-4F47-9EE0-ECBB46A7751E}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Incubus_Privilege_drums" ID="{5483EA35-2618-49B9-856B-67C098D19D57}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="232000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Incubus_Privilege_drums" ID="{D30E4003-8F65-44AE-BABE-123C20D22AA1}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Incubus_Privilege_guitar" ID="{1938CB90-257C-4629-B5BA-32C44928D840}" ShortID="882807304">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{2CDA4892-363C-4793-9689-36F958194EEC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Incubus_Privilege_guitar" ID="{58761728-ABEB-4FE1-9BB4-AA1F04CA5454}">
+											<Language>SFX</Language>
+											<AudioFile>Incubus_Privilege_guitar.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="374313050"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{AB96E566-4E58-4FD5-8988-F63A18003981}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Incubus_Privilege_guitar" ID="{9B437386-B7E3-4152-B53D-6ED72BF4C69B}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="232000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Incubus_Privilege_guitar" ID="{58761728-ABEB-4FE1-9BB4-AA1F04CA5454}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+								<MusicTrack Name="Incubus_Privilege_vocals" ID="{E206E7D0-B504-480B-B107-BA0D11C8976E}" ShortID="417225367">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{1D63E767-4388-48F7-85B2-FDA161CEFE6B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Incubus_Privilege_vocals" ID="{56666BEE-8B7B-4E0C-BA35-551ED8560B08}">
+											<Language>SFX</Language>
+											<AudioFile>Incubus_Privilege_vocals.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="375822649"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{A08F6FB8-6C14-4C82-AA87-C35EEB3C8222}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="Incubus_Privilege_vocals" ID="{26FA7192-0A8D-4BD7-9C12-0A0EB61B8E26}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="232000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Incubus_Privilege_vocals" ID="{56666BEE-8B7B-4E0C-BA35-551ED8560B08}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{B79B5ADA-F89A-43C6-86A1-EEE9C05E6ABD}"/>
+									<MusicCue Name="Exit Cue" ID="{357E2DC7-9B7F-4265-A914-36D988BB64B5}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="232000"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{446BC5D2-0F9F-4966-9405-EBC228CE4874}" ShortID="357100663">
+					<ChildrenList>
+						<MusicSegment Name="SFX_Hit_001" ID="{1C7CD3BD-031B-48CB-806B-1FA55A68E7DF}" ShortID="803737446">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_Hit_001" ID="{2A445B83-4BC3-4A61-B6F5-31832BE35A1B}" ShortID="235330217">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{26E0D42B-2F53-48A0-8254-1FA656490016}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Hit_001" ID="{C0AA37FE-CBBE-4C6B-8AD7-43EC2A62968C}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Hit_001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="656669019"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{F4120144-57FC-44C6-BD83-1E99CD6350EB}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_Hit_001" ID="{0A38EB4D-51BC-44C7-9D0F-8E8AE2C442CC}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_Hit_001" ID="{C0AA37FE-CBBE-4C6B-8AD7-43EC2A62968C}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{9BE55AE0-756E-4264-B68F-BE2768C69225}"/>
+									<MusicCue Name="Exit Cue" ID="{37136C9E-FFAF-4699-A5E9-8A115564C173}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SFX_Miss_000" ID="{46A75401-F330-4ADA-96E7-380CB74A97B9}" ShortID="716383185">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_Miss_000" ID="{389E0CCC-5E68-4E32-AB8B-1826D7B87939}" ShortID="619714730">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{70DA456E-78E1-44C2-B48B-B6E13624279F}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Miss_000" ID="{E7DA9BC4-9B80-4588-A166-07A5E6A492D2}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Miss_000.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="450067902"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{5499F5BC-E483-4F01-8C0C-37DBE7B09FB1}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_Miss_000" ID="{FE0DF52F-564C-46DD-979E-071B9071D3D1}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_Miss_000" ID="{E7DA9BC4-9B80-4588-A166-07A5E6A492D2}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{8D1403D1-2BBC-4121-986A-352F9FDE57DE}"/>
+									<MusicCue Name="Exit Cue" ID="{9FA4D746-1419-4C8A-B5FC-E2B59FFC2A69}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SFX_Miss_001" ID="{210231CA-2354-427F-8646-BF03E0135366}" ShortID="928984116">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_Miss_001" ID="{2C0D06C6-A58C-43B8-9565-4C3C610F4C58}" ShortID="688326525">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B021B427-7053-4CB9-A386-3E8647CAFC80}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Miss_001" ID="{673B3F0A-4C83-41ED-8237-C6B311BA58AA}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Miss_001.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="92379320"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{8EB904E3-09F2-48FE-9679-E3C17C5BC127}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_Miss_001" ID="{60BAD578-C767-42F9-8860-13176224330A}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_Miss_001" ID="{673B3F0A-4C83-41ED-8237-C6B311BA58AA}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{CA31ED04-9F92-49FB-B2D6-41865F3C66D5}"/>
+									<MusicCue Name="Exit Cue" ID="{B9336021-A223-4B48-9B99-5BA6CFBB0C38}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SFX_Miss_002" ID="{90CE3DA7-F2C0-4962-A3F0-938A7337366F}" ShortID="217973033">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_Miss_002" ID="{2D772660-4AF0-4247-BFC3-37BBFDEA472A}" ShortID="403668382">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{149DAF4F-A1B8-442C-A568-470F093C96CE}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Miss_002" ID="{F69A774C-6E76-4149-943A-73CACCAC7B3A}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Miss_002.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="127142063"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{22927D94-42F3-42C9-A913-04AB32175AA6}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_Miss_002" ID="{F0B521B9-AB55-483B-BC07-7871B592D62B}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_Miss_002" ID="{F69A774C-6E76-4149-943A-73CACCAC7B3A}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{A7E7EABC-FC4D-438D-889A-430CA56BEFCB}"/>
+									<MusicCue Name="Exit Cue" ID="{F8262492-7B11-4FE9-972F-B193AFD7E38A}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SFX_Lanepress" ID="{245AB43D-E036-4FE3-8C9E-A890552A427B}" ShortID="838056523">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_Miss_003" ID="{1EC55B1C-690A-4F11-87E8-7A84939ECAF1}" ShortID="273313397">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{B042B511-264C-4101-A352-3C7D961D0F43}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_Miss_003" ID="{9040DBDE-637C-49E6-88CF-878D01FD0145}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_Miss_003.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="766390380"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{CF628C45-7A53-445F-BF30-FDFFC025F733}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_Miss_003" ID="{C6E12AE9-F932-45EB-8A93-8EC5D17D0FF1}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_Miss_003" ID="{9040DBDE-637C-49E6-88CF-878D01FD0145}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{00681186-8ABA-4A0E-814B-3656306A9B63}"/>
+									<MusicCue Name="Exit Cue" ID="{7630709C-0167-4F05-A016-0D2770D1CAAD}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+						<MusicSegment Name="SFX_UI_Click" ID="{72F0B615-7A60-4BE8-948C-5ACB2358FE14}" ShortID="324760143">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{20F5C4EF-126A-418C-95ED-D1905C9CD300}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicTrack Name="SFX_UI_Click" ID="{ACC71565-4911-4E6C-8EB5-6B0AB870F0AA}" ShortID="300468159">
+									<ReferenceList>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Bus_Master" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{86053357-218C-4A56-A844-4304A3578226}"/>
+										</Reference>
+										<Reference Name="TransitionRoot">
+											<Custom>
+												<MusicTransition Name="Root" ID="{43E43737-B8C2-431E-805D-4C83612567DD}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</Custom>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="SFX_UI_Click" ID="{3B16EA79-A947-4C78-B894-FF2F498893D9}">
+											<Language>SFX</Language>
+											<AudioFile>SFX_UI_Click.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="125062013"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Sequences">
+											<MusicTrackSequence Name="" ID="{8CA4C6E1-A185-4CA9-933A-6277D7B74558}">
+												<ObjectLists>
+													<ObjectList Name="Clips">
+														<MusicClip Name="SFX_UI_Click" ID="{EB20E675-A388-4498-A0D4-87A894A4398E}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="500"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="SFX_UI_Click" ID="{3B16EA79-A947-4C78-B894-FF2F498893D9}"/>
+														</MusicClip>
+													</ObjectList>
+												</ObjectLists>
+											</MusicTrackSequence>
+										</ObjectList>
+									</ObjectLists>
+								</MusicTrack>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Cues">
+									<MusicCue Name="Entry Cue" ID="{9EF0CBF1-AD63-4E62-BE5A-EC8A1BFBF116}"/>
+									<MusicCue Name="Exit Cue" ID="{B1AD324C-5692-4D5F-AF63-669EB01797A6}">
+										<PropertyList>
+											<Property Name="CueType" Type="int16" Value="1"/>
+											<Property Name="TimeMs" Type="Real64" Value="500"/>
+										</PropertyList>
+									</MusicCue>
+								</ObjectList>
+							</ObjectLists>
+						</MusicSegment>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

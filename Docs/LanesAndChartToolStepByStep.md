@@ -52,3 +52,10 @@ Con esto puedes re-skinnear lanes sin tocar código.
 - Soporte completo de acordes visuales multi-lane.
 - Herramienta de snap musical (1/4, 1/8, 1/16).
 - Migración a TMP para HUD/lane labels con estilo final.
+
+
+## 7) Troubleshooting
+
+- Si ves lanes pero sin notas, verifica que `SongSessionController` tenga `SongDefinition`/`ChartSource` válido y que el chart tenga `notes`.
+- En `LaneNoteScroller`, usa `Rebuild Notes` para forzar reconstrucción manual.
+- El `LaneNoteScroller` ahora reintenta construir notas en runtime hasta que la sesión esté lista.

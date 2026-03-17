@@ -9,11 +9,13 @@ namespace GuitarPoorGuy.UI.Lanes
     {
         [SerializeField] private SongSessionController sessionController;
         [SerializeField] private LaneLayoutController laneLayoutController;
+        [SerializeField] private float retryBuildIntervalSeconds = 0.25f;
 
         private readonly List<RectTransform> _activeNoteRects = new List<RectTransform>();
         private readonly List<float> _activeNoteTimes = new List<float>();
 
         private bool _built;
+        private float _nextBuildAttemptTime;
 
         private void Start()
         {
@@ -27,12 +29,18 @@ namespace GuitarPoorGuy.UI.Lanes
                 laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
             }
 
-            BuildNotes();
+            TryBuildNotes();
         }
 
         private void Update()
         {
-            if (!_built || sessionController == null || laneLayoutController == null || laneLayoutController.Theme == null)
+            if (!_built)
+            {
+                TryBuildNotesPeriodically();
+                return;
+            }
+
+            if (sessionController == null || laneLayoutController == null || laneLayoutController.Theme == null)
             {
                 return;
             }
@@ -59,18 +67,49 @@ namespace GuitarPoorGuy.UI.Lanes
         [ContextMenu("Rebuild Notes")]
         public void BuildNotes()
         {
-            ClearNotes();
+            TryBuildNotes(force: true);
+        }
+
+        private void TryBuildNotesPeriodically()
+        {
+            if (Time.unscaledTime < _nextBuildAttemptTime)
+            {
+                return;
+            }
+
+            _nextBuildAttemptTime = Time.unscaledTime + Mathf.Max(0.05f, retryBuildIntervalSeconds);
+            TryBuildNotes();
+        }
+
+        private bool TryBuildNotes(bool force = false)
+        {
+            if (sessionController == null)
+            {
+                sessionController = FindFirstObjectByType<SongSessionController>();
+            }
+
+            if (laneLayoutController == null)
+            {
+                laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
+            }
 
             if (sessionController == null || laneLayoutController == null || laneLayoutController.Theme == null)
             {
-                return;
+                return false;
+            }
+
+            if (!force && !sessionController.IsSessionReady)
+            {
+                return false;
             }
 
             var chart = sessionController.ActiveChart;
-            if (chart == null || chart.notes == null)
+            if (chart == null || chart.notes == null || chart.notes.Length == 0)
             {
-                return;
+                return false;
             }
+
+            ClearNotes();
 
             var laneContainers = laneLayoutController.LaneContainers;
             if (laneContainers == null || laneContainers.Count == 0)
@@ -109,6 +148,7 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             _built = _activeNoteRects.Count > 0;
+            return _built;
         }
 
         private void ClearNotes()

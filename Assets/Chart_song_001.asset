@@ -17,4 +17,4 @@ MonoBehaviour:
     0, \"type\": \"tap\" },\r\n    { \"timeMs\": 1500, \"lane\": 1, \"type\": \"tap\"
     },\r\n    { \"timeMs\": 2000, \"lane\": 2, \"type\": \"sustain\", \"durationMs\":
     750 },\r\n    {\r\n      \"timeMs\": 3200,\r\n      \"lane\": 0,\r\n      \"type\":
-    \"chord\",\r\n      \"chordLanes\": [0, 3]\r\n    }\r\n  ]\r\n}\t"
+    \"chord\",\r\n      \"chordLanes\": [0, 3]\r\n    }\r\n  ]\r\n}"

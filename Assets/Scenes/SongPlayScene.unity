@@ -972,6 +972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.UI.Lanes.LaneNoteScroller
   sessionController: {fileID: 2094890990}
   laneLayoutController: {fileID: 142878969}
+  retryBuildIntervalSeconds: 0.25
 --- !u!4 &958850076
 Transform:
   m_ObjectHideFlags: 0

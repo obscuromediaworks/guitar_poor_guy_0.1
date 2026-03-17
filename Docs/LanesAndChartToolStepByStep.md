@@ -82,3 +82,10 @@ En `LaneVisualTheme` activa `Show Validation Zone` y ajusta:
 - `Validation Zone Color`
 
 Eso dibuja una banda visible alrededor de la hit line para debug de timing/ventanas de acierto.
+
+
+## 9) Reiniciar sesión en Play Mode
+
+- En `SongSessionController` activa `Enable Quick Restart` y define `Restart Key` (default `R`).
+- Durante Play Mode presiona esa tecla para reiniciar la partida sin salir del editor.
+- También puedes usar el ContextMenu `Restart Session` en el componente.

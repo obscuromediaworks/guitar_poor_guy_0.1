@@ -79,3 +79,8 @@ Sigue `Docs/SongAuthoringStepByStep.md` para alinear Wwise (audio) + chart (game
 ## 10) Lanes + herramienta visual de charts
 
 Sigue `Docs/LanesAndChartToolStepByStep.md` para montar carriles visuales personalizables y usar la ventana de authoring de charts en el editor.
+
+
+## 11) Reinicio rápido en Play Mode
+
+En `SongSessionController` deja activo `Enable Quick Restart` y usa `Restart Key` (default `R`) para reiniciar la sesión sin salir de Play Mode.

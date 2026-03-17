@@ -4,6 +4,7 @@ using GuitarPoorGuy.Gameplay.Data;
 using GuitarPoorGuy.Gameplay.Input;
 using GuitarPoorGuy.Gameplay.Systems;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace GuitarPoorGuy.Gameplay.Session
 {
@@ -19,6 +20,10 @@ namespace GuitarPoorGuy.Gameplay.Session
         [SerializeField] private SongTimeSource timeSource;
         [SerializeField] private MonoBehaviour audioServiceBehaviour;
         [SerializeField] private MonoBehaviour laneInputSourceBehaviour;
+
+        [Header("Session")]
+        [SerializeField] private bool enableQuickRestart = true;
+        [SerializeField] private Key restartKey = Key.R;
 
         [Header("Judge Windows")]
         [SerializeField] private double perfectWindowMs = 40;
@@ -85,6 +90,8 @@ namespace GuitarPoorGuy.Gameplay.Session
 
         private void Update()
         {
+            HandleQuickRestart();
+
             for (var lane = 0; lane < LaneCount; lane++)
             {
                 HandleLane(lane);
@@ -172,12 +179,46 @@ namespace GuitarPoorGuy.Gameplay.Session
             return "song_001";
         }
 
+        private void HandleQuickRestart()
+        {
+            if (!enableQuickRestart)
+            {
+                return;
+            }
+
+            var keyboard = Keyboard.current;
+            if (keyboard == null || !keyboard[restartKey].wasPressedThisFrame)
+            {
+                return;
+            }
+
+            RestartSession();
+        }
+
+        [ContextMenu("Restart Session")]
+        public void RestartSession()
+        {
+            if (_chart == null || timeSource == null)
+            {
+                return;
+            }
+
+            _audioService?.StopSong(_activeSongId);
+            _score = new ScoreSystem();
+            LastHitQuality = HitQuality.Miss;
+            _laneCursor = new int[LaneCount];
+            timeSource.Reset(_chart.offsetMs);
+            _audioService?.PlaySong(_activeSongId);
+        }
+
         private void HandleLane(int lane)
         {
             if (!_laneInputSource.WasLanePressedThisFrame(lane))
             {
                 return;
             }
+
+            _audioService?.PlayLanePress(lane);
 
             var note = FindNextNoteForLane(lane);
             if (note == null)

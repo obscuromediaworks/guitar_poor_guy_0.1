@@ -20,6 +20,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
         private void OnEnable()
         {
+            AutoResolveText();
             _startedAt = Time.unscaledTime;
             IsFinished = false;
             _initialized = true;
@@ -73,7 +74,37 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             countdownText.enabled = enabled;
+            if (countdownText.color.a < 0.95f)
+            {
+                var c = countdownText.color;
+                c.a = 1f;
+                countdownText.color = c;
+            }
+
             countdownText.text = value;
+        }
+
+        private void AutoResolveText()
+        {
+            if (countdownText != null)
+            {
+                return;
+            }
+
+            var allTexts = FindObjectsByType<Text>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            for (var i = 0; i < allTexts.Length; i++)
+            {
+                if (allTexts[i].name.Contains("Countdown"))
+                {
+                    countdownText = allTexts[i];
+                    return;
+                }
+            }
+
+            if (allTexts.Length > 0)
+            {
+                countdownText = allTexts[0];
+            }
         }
     }
 }

@@ -7,6 +7,7 @@
 - `Stop_Music_<SongId>`
 - `Play_SFX_Hit`
 - `Play_SFX_Miss`
+- `Play_SFX_LanePress`
 - `Play_UI_Click`
 
 ### Buses
@@ -14,6 +15,9 @@
 - `Bus_Music`
 - `Bus_SFX`
 - `Bus_UI`
+
+
+> Recomendación práctica: dispara `Play_SFX_LanePress` al input del jugador (aunque falle el hit) para validar táctilmente que la pulsación entró.
 
 ### RTPC
 - `RTPC_Player_ComboIntensity` (0-100)

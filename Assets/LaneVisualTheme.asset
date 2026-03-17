@@ -28,3 +28,6 @@ MonoBehaviour:
   noteHeight: 30
   noteTravelHeight: 520
   noteLeadTimeMs: 1800
+  showValidationZone: 1
+  validationZoneHeight: 56
+  validationZoneColor: {r: 0, g: 0.95, b: 0.35, a: 0.12156863}

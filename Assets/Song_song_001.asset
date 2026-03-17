@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a96d7855276b942880f8666851c33a, type: 3}
+  m_Name: Song_song_001
+  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.Gameplay.Data.SongDefinition
+  songId: song_001
+  chartSource: {fileID: 11400000, guid: d52b4b18c48957a44b20b679c56d9bbb, type: 2}
+  playMusicEventOverride: 
+  stopMusicEventOverride: 

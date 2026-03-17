@@ -12,6 +12,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
         private readonly List<RectTransform> _laneContainers = new List<RectTransform>();
         private RectTransform _hitLineRect;
+        private RectTransform _validationZoneRect;
 
         public IReadOnlyList<RectTransform> LaneContainers => _laneContainers;
         public LaneVisualTheme Theme => theme;
@@ -64,6 +65,22 @@ namespace GuitarPoorGuy.UI.Lanes
                 accentImage.color = theme.GetLaneAccentColor(lane);
 
                 _laneContainers.Add(laneRect);
+            }
+
+
+            if (theme.showValidationZone)
+            {
+                var zoneObject = new GameObject("ValidationZone", typeof(RectTransform), typeof(Image));
+                zoneObject.transform.SetParent(lanesRoot, false);
+                _validationZoneRect = (RectTransform)zoneObject.transform;
+                _validationZoneRect.anchorMin = new Vector2(0.5f, 0f);
+                _validationZoneRect.anchorMax = new Vector2(0.5f, 0f);
+                _validationZoneRect.sizeDelta = new Vector2(totalWidth + 20f, theme.validationZoneHeight);
+                _validationZoneRect.anchoredPosition = new Vector2(0f, -theme.laneHeight * 0.45f);
+
+                var zoneImage = zoneObject.GetComponent<Image>();
+                zoneImage.color = theme.validationZoneColor;
+                zoneObject.transform.SetSiblingIndex(Mathf.Max(0, zoneObject.transform.GetSiblingIndex() - 1));
             }
 
             var hitLineObject = new GameObject("HitLine", typeof(RectTransform), typeof(Image));

@@ -9,7 +9,9 @@ namespace GuitarPoorGuy.UI.Lanes
     {
         [SerializeField] private SongSessionController sessionController;
         [SerializeField] private LaneLayoutController laneLayoutController;
+        [SerializeField] private CountdownSequenceUI countdownSequenceUI;
         [SerializeField] private float retryBuildIntervalSeconds = 0.25f;
+        [SerializeField] private float noteFallStartDelayMs = 0f;
 
         private readonly List<RectTransform> _activeNoteRects = new List<RectTransform>();
         private readonly List<float> _activeNoteTimes = new List<float>();
@@ -29,11 +31,26 @@ namespace GuitarPoorGuy.UI.Lanes
                 laneLayoutController = FindFirstObjectByType<LaneLayoutController>();
             }
 
+            if (countdownSequenceUI == null)
+            {
+                countdownSequenceUI = FindFirstObjectByType<CountdownSequenceUI>();
+            }
+
+            if (countdownSequenceUI != null && noteFallStartDelayMs <= 0f)
+            {
+                noteFallStartDelayMs = countdownSequenceUI.TotalDurationSeconds * 1000f;
+            }
+
             TryBuildNotes();
         }
 
         private void Update()
         {
+            if (countdownSequenceUI != null && !countdownSequenceUI.IsFinished)
+            {
+                return;
+            }
+
             if (!_built)
             {
                 TryBuildNotesPeriodically();
@@ -46,7 +63,7 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             var theme = laneLayoutController.Theme;
-            var nowMs = (float)sessionController.CurrentSongTimeMs;
+            var nowMs = (float)sessionController.CurrentSongTimeMs - Mathf.Max(0f, noteFallStartDelayMs);
 
             for (var i = 0; i < _activeNoteRects.Count; i++)
             {
@@ -99,6 +116,11 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             if (!force && !sessionController.IsSessionReady)
+            {
+                return false;
+            }
+
+            if (!force && countdownSequenceUI != null && !countdownSequenceUI.IsFinished)
             {
                 return false;
             }

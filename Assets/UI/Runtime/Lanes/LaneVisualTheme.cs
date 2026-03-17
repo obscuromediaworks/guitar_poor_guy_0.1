@@ -32,6 +32,11 @@ namespace GuitarPoorGuy.UI.Lanes
         [Header("Timing")]
         [Min(100f)] public float noteLeadTimeMs = 1800f;
 
+        [Header("Validation Zone (Debug)")]
+        public bool showValidationZone = true;
+        [Min(4f)] public float validationZoneHeight = 56f;
+        public Color validationZoneColor = new Color(0.90f, 0.95f, 0.35f, 0.20f);
+
         public Color GetLaneAccentColor(int lane)
         {
             if (laneAccentColors == null || laneAccentColors.Length == 0)

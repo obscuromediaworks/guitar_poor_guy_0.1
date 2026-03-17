@@ -28,7 +28,21 @@ Con esto puedes re-skinnear lanes sin tocar código.
 2. Asigna:
    - `Session Controller` = `SongSessionController`
    - `Lane Layout Controller` = `LaneLayoutController`
-3. Inicia Play Mode: las notas del chart se renderizan por lane y bajan hacia la hit line.
+3. Ajusta `Note Fall Start Delay Ms` para customizar cuándo empiezan a caer las notas.
+4. Inicia Play Mode: las notas del chart se renderizan por lane y bajan hacia la hit line.
+
+## 3.1) Countdown Ready?/GO!
+
+1. En el Canvas crea un `Text` centrado (`CountdownText`).
+2. Crea un objeto `CountdownSequenceUI` y añade el componente `CountdownSequenceUI`.
+3. Asigna `Countdown Text` = `CountdownText`.
+4. Configura tiempos:
+   - `Ready Duration Seconds`
+   - `Pause Duration Seconds`
+   - `Go Duration Seconds`
+5. En `LaneNoteScroller`, asigna `Countdown Sequence UI` al objeto anterior.
+
+> Si `Note Fall Start Delay Ms` está en 0, `LaneNoteScroller` toma automáticamente la duración total del countdown.
 
 ## 4) Herramienta visual para editar charts
 
@@ -59,3 +73,12 @@ Con esto puedes re-skinnear lanes sin tocar código.
 - Si ves lanes pero sin notas, verifica que `SongSessionController` tenga `SongDefinition`/`ChartSource` válido y que el chart tenga `notes`.
 - En `LaneNoteScroller`, usa `Rebuild Notes` para forzar reconstrucción manual.
 - El `LaneNoteScroller` ahora reintenta construir notas en runtime hasta que la sesión esté lista.
+
+
+## 8) Zona de validación (debug)
+
+En `LaneVisualTheme` activa `Show Validation Zone` y ajusta:
+- `Validation Zone Height`
+- `Validation Zone Color`
+
+Eso dibuja una banda visible alrededor de la hit line para debug de timing/ventanas de acierto.

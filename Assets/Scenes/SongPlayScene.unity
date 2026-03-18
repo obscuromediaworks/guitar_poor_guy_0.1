@@ -920,7 +920,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 835847427}
-  - component: {fileID: 835847428}
   m_Layer: 0
   m_Name: CountdownSequenceUI
   m_TagString: Untagged
@@ -943,25 +942,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1299458759}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &835847428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 835847426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c3c4d9583c1d3a49884060992dcb735, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.UI.Lanes.CountdownSequenceUI
-  countdownText: {fileID: 1147228436}
-  countdownTmpText: {fileID: 0}
-  readyText: Ready?
-  goText: GO!
-  readyDurationSeconds: 2
-  pauseDurationSeconds: 0.5
-  goDurationSeconds: 2
 --- !u!1 &904458087
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,7 +951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904458089}
-  - component: {fileID: 904458088}
+  - component: {fileID: 904458090}
   m_Layer: 0
   m_Name: AudioService
   m_TagString: Untagged
@@ -979,18 +959,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &904458088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904458087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8977a458f90d8204dabd892f6949089e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.Audio.NullAudioService
 --- !u!4 &904458089
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,6 +974,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 374984758}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &904458090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904458087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a31a2442a78f1f641bec10ab6650831c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.Audio.WwiseAudioService
+  lanePressEvent: Play_SFX_LanePress
+  strumEvent: Play_SFX_Strum
+  hitEvent: Play_SFX_Hit
+  missEvent: Play_SFX_Miss
+  comboRtpc: RTPC_Player_ComboIntensity
+  guitarLayerRtpc: RTPC_Music_GuitarLayer
+  hitQualitySwitchGroup: HitQuality
 --- !u!1 &943923219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1116,7 +1103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.UI.Lanes.LaneNoteScroller
   sessionController: {fileID: 2094890990}
   laneLayoutController: {fileID: 142878969}
-  countdownSequenceUI: {fileID: 835847428}
+  countdownSequenceUI: {fileID: 1299458760}
   retryBuildIntervalSeconds: 0.25
   noteFallStartDelayMs: 0
 --- !u!4 &958850076
@@ -1222,6 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1299458759}
+  - component: {fileID: 1299458760}
   m_Layer: 0
   m_Name: Controllers
   m_TagString: Untagged
@@ -1249,6 +1237,25 @@ Transform:
   - {fileID: 835847427}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1299458760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299458758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c3c4d9583c1d3a49884060992dcb735, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GuitarPoorGuy.UI.Lanes.CountdownSequenceUI
+  countdownText: {fileID: 1147228436}
+  countdownTmpText: {fileID: 0}
+  readyText: Ready?
+  goText: GO!
+  readyDurationSeconds: 2
+  pauseDurationSeconds: 0.5
+  goDurationSeconds: 2
 --- !u!1 &1310510492
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,9 +1345,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1352548200}
   - component: {fileID: 1352548201}
-  - component: {fileID: 1352548204}
-  - component: {fileID: 1352548203}
-  - component: {fileID: 1352548202}
   m_Layer: 0
   m_Name: LaneInputSource
   m_TagString: Untagged
@@ -1380,91 +1384,6 @@ MonoBehaviour:
   lane2: 18
   lane3: 20
   lane4: 21
---- !u!54 &1352548202
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352548197}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &1352548203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352548197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44da5fb65e34b0441ab308de1762c22f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAmbient
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 9c8276ce8f70d3045bb1cc53301b63d4, type: 2}
-  useCallbacks: 0
-  stopSoundOnDestroy: 1
-  Callbacks: []
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &1352548204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1352548197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4e8cb66ecaa06c439772f1eda51214d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  usePositionOffsetData: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  scalingFactor: 1
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &1481524754
 GameObject:
   m_ObjectHideFlags: 0
@@ -1741,9 +1660,9 @@ MonoBehaviour:
   songDefinition: {fileID: 11400000, guid: c2bf5e360d8c454488302278e5a7eb35, type: 2}
   chartSource: {fileID: 11400000, guid: d52b4b18c48957a44b20b679c56d9bbb, type: 2}
   timeSource: {fileID: 2130190452}
-  audioServiceBehaviour: {fileID: 904458088}
+  audioServiceBehaviour: {fileID: 904458090}
   laneInputSourceBehaviour: {fileID: 1352548201}
-  countdownSequenceUI: {fileID: 0}
+  countdownSequenceUI: {fileID: 1299458760}
   enableQuickRestart: 1
   restartKey: 32
   gameplayTimingDelayMs: 0

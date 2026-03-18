@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<Folder Name="MusicControl" ID="{896456C6-8CAB-4C86-96CD-2D7B1DE77D83}" ShortID="291451191">
 					<ChildrenList>
-						<Event Name="Play_Music_Incubus_Privilege" ID="{E6DE7C92-BF59-4494-B642-9F3BEE507C4C}">
+						<Event Name="Play_Music_song_001" ID="{E6DE7C92-BF59-4494-B642-9F3BEE507C4C}">
 							<ChildrenList>
 								<Action Name="" ID="{00B603B7-C714-4830-96DB-F6D86464F8B3}" ShortID="826124395">
 									<ReferenceList>
@@ -16,7 +16,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Stop_Music_Incubus_Privilege" ID="{52C79FDB-5145-4F36-88B8-4CEAFFBB1687}">
+						<Event Name="Stop_Music_song_001" ID="{52C79FDB-5145-4F36-88B8-4CEAFFBB1687}">
 							<ChildrenList>
 								<Action Name="" ID="{E90BD54C-6725-47BE-A2B3-7822AF712B6F}" ShortID="54513027">
 									<PropertyList>

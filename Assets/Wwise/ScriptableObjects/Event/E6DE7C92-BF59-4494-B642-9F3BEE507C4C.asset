@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae23a52323f10b647b4f6197fa0e661a, type: 3}
   m_Name: E6DE7C92-BF59-4494-B642-9F3BEE507C4C
   m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
-  objectName: Play_Music_Incubus_Privilege
-  id: 1812711115
+  objectName: Play_Music_song_001
+  id: 1966749849
   guid: E6DE7C92-BF59-4494-B642-9F3BEE507C4C
   IsInUserDefinedSoundBank: 1

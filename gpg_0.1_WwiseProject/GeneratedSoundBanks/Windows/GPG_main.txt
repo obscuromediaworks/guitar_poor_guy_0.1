@@ -1,10 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	17380391	Play_SFX_Miss_000			\Default Work Unit\SFX\Play_SFX_Miss_000	
 	681554853	Play_SFX_Hit_001			\Default Work Unit\SFX\Play_SFX_Hit_001	
-	1812711115	Play_Music_Incubus_Privilege			\Default Work Unit\MusicControl\Play_Music_Incubus_Privilege	
 	1856456021	Play_SFX_Lanepress			\Default Work Unit\SFX\Play_SFX_Lanepress	
-	2659419889	Stop_Music_Incubus_Privilege			\Default Work Unit\MusicControl\Stop_Music_Incubus_Privilege	
+	1966749849	Play_Music_song_001			\Default Work Unit\MusicControl\Play_Music_song_001	
 	3504421513	Play_SFX_UI_Click			\Default Work Unit\SFX\Play_SFX_UI_Click	
+	3884991287	Stop_Music_song_001			\Default Work Unit\MusicControl\Stop_Music_song_001	
 	4014817549	Play_SFX_Strum			\Default Work Unit\SFX\Play_SFX_Strum	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

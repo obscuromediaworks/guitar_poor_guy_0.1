@@ -4,7 +4,15 @@
 		<WorkUnit Name="Default Work Unit" ID="{242812E0-C327-4F8F-8EB8-58417AC6FC26}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundBank Name="GPG_main" ID="{03B1CB12-A7CB-4F09-9056-2038B27FC447}">
-					<ObjectInclusionList/>
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_SFX_Lanepress" ID="{866D99F3-ECFC-43EF-837E-118A017A7413}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Music_Incubus_Privilege" ID="{E6DE7C92-BF59-4494-B642-9F3BEE507C4C}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SFX_Strum" ID="{2E436B12-A32F-4857-8157-D39267C1FB5A}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SFX_UI_Click" ID="{E263532B-C3B1-4B48-AB87-4C5F5819A095}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SFX_Hit_001" ID="{632FA10C-2874-4BB8-A72C-48A6E982CE99}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_SFX_Miss_000" ID="{7BBE52D5-9261-4BEC-8855-4081200ECCF6}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Music_Incubus_Privilege" ID="{52C79FDB-5145-4F36-88B8-4CEAFFBB1687}" WorkUnitID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{52444182-F791-B136-6DC4-6A80548D5AAA}",
+    "Hash": "{63BDA5F9-024B-BC64-0EC8-16820DB53982}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -58,6 +58,14 @@
       "Name": "Bus_Master",
       "ObjectPath": "\\Busses\\Default Work Unit\\Bus_Master",
       "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2455186356",
+      "Name": "RTPC_Music_GuitarLayer",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Music_GuitarLayer",
+      "GUID": "{39DA9122-5576-4D72-8268-0C0788B53327}"
      }
     ],
     "StateGroups": [
@@ -130,6 +138,6 @@
     ]
    }
   ],
-  "FileHash": "{1869EEC4-7C81-C9A8-891D-422498CA40C5}"
+  "FileHash": "{F407AA7E-C6BE-71F4-8F41-D8A8B526F011}"
  }
 }

@@ -1,0 +1,22 @@
+Event	ID	Name			Wwise Object Path	Notes
+	17380391	Play_SFX_Miss_000			\Default Work Unit\SFX\Play_SFX_Miss_000	
+	681554853	Play_SFX_Hit_001			\Default Work Unit\SFX\Play_SFX_Hit_001	
+	1812711115	Play_Music_Incubus_Privilege			\Default Work Unit\MusicControl\Play_Music_Incubus_Privilege	
+	1856456021	Play_SFX_Lanepress			\Default Work Unit\SFX\Play_SFX_Lanepress	
+	2659419889	Stop_Music_Incubus_Privilege			\Default Work Unit\MusicControl\Stop_Music_Incubus_Privilege	
+	3504421513	Play_SFX_UI_Click			\Default Work Unit\SFX\Play_SFX_UI_Click	
+	4014817549	Play_SFX_Strum			\Default Work Unit\SFX\Play_SFX_Strum	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2455186356	RTPC_Music_GuitarLayer			\Default Work Unit\RTPC_Music_GuitarLayer	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	125062013	SFX_UI_Click	.cache\77\{77858375-36A8-BC8E-EB35-992DB80E5BB6}.wem		\Containers\Default Work Unit\SFX\SFX_UI_Click\SFX_UI_Click		88296
+	317264215	Incubus_Privilege_bass	.cache\14\{148ACA2F-96E6-6401-5C74-CA36EA432CD1}.wem		\Containers\Default Work Unit\Songs\Incubus_Privilege\Incubus_Privilege_bass		40924896
+	374313050	Incubus_Privilege_guitar	.cache\A4\{A4CB0C53-7247-7F07-2B23-ADBAE091B6EE}.wem		\Containers\Default Work Unit\Songs\Incubus_Privilege\Incubus_Privilege_guitar		40924896
+	375822649	Incubus_Privilege_vocals	.cache\56\{56B9F88F-CB0F-EFFA-7201-460DA2ADB1B4}.wem		\Containers\Default Work Unit\Songs\Incubus_Privilege\Incubus_Privilege_vocals		40924896
+	450067902	SFX_Miss_000	.cache\C6\{C68ABB05-5AF6-4239-AE65-C051ABFB7ABB}.wem		\Containers\Default Work Unit\SFX\SFX_Miss_000\SFX_Miss_000		88296
+	656669019	SFX_Hit_001	.cache\2C\{2CE4778F-42A7-E798-38DB-04EC68A251F5}.wem		\Containers\Default Work Unit\SFX\SFX_Hit_001\SFX_Hit_001		88296
+	766390380	SFX_Miss_003	.cache\C7\{C757EAED-AF16-9536-0AC6-620F721C3DCB}.wem		\Containers\Default Work Unit\SFX\SFX_Lanepress\SFX_Miss_003		88296
+	938802729	Incubus_Privilege_drums	.cache\2F\{2F03215B-8A21-CD10-4CB8-22C16376B1D9}.wem		\Containers\Default Work Unit\Songs\Incubus_Privilege\Incubus_Privilege_drums		40924896
+

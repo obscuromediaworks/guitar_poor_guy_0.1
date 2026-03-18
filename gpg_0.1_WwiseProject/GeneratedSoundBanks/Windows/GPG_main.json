@@ -10,12 +10,187 @@
     "Type": "User",
     "GUID": "{03B1CB12-A7CB-4F09-9056-2038B27FC447}",
     "Language": "SFX",
-    "Hash": "{59B0E6F5-E3D4-3747-7984-3ADC277C12A8}",
+    "Hash": "{595EEDD0-5DDF-3A5D-7590-C285B6E2F821}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\GPG_main",
     "ShortName": "GPG_main",
-    "Path": "GPG_main.bnk"
+    "Path": "GPG_main.bnk",
+    "Media": [
+     {
+      "Id": "125062013",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_UI_Click.wav",
+      "CachePath": "77/{77858375-36A8-BC8E-EB35-992DB80E5BB6}.wem"
+     },
+     {
+      "Id": "317264215",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Incubus_Privilege_bass.wav",
+      "CachePath": "14/{148ACA2F-96E6-6401-5C74-CA36EA432CD1}.wem"
+     },
+     {
+      "Id": "374313050",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Incubus_Privilege_guitar.wav",
+      "CachePath": "A4/{A4CB0C53-7247-7F07-2B23-ADBAE091B6EE}.wem"
+     },
+     {
+      "Id": "375822649",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Incubus_Privilege_vocals.wav",
+      "CachePath": "56/{56B9F88F-CB0F-EFFA-7201-460DA2ADB1B4}.wem"
+     },
+     {
+      "Id": "450067902",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Miss_000.wav",
+      "CachePath": "C6/{C68ABB05-5AF6-4239-AE65-C051ABFB7ABB}.wem"
+     },
+     {
+      "Id": "656669019",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Hit_001.wav",
+      "CachePath": "2C/{2CE4778F-42A7-E798-38DB-04EC68A251F5}.wem"
+     },
+     {
+      "Id": "766390380",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX_Miss_003.wav",
+      "CachePath": "C7/{C757EAED-AF16-9536-0AC6-620F721C3DCB}.wem"
+     },
+     {
+      "Id": "938802729",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Incubus_Privilege_drums.wav",
+      "CachePath": "2F/{2F03215B-8A21-CD10-4CB8-22C16376B1D9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1812711115",
+      "Name": "Play_Music_Incubus_Privilege",
+      "ObjectPath": "\\Events\\Default Work Unit\\MusicControl\\Play_Music_Incubus_Privilege",
+      "GUID": "{E6DE7C92-BF59-4494-B642-9F3BEE507C4C}",
+      "DurationType": "OneShot",
+      "DurationMin": "232",
+      "DurationMax": "232",
+      "MediaRefs": [
+       {
+        "Id": "317264215"
+       },
+       {
+        "Id": "374313050"
+       },
+       {
+        "Id": "375822649"
+       },
+       {
+        "Id": "938802729"
+       }
+      ]
+     },
+     {
+      "Id": "681554853",
+      "Name": "Play_SFX_Hit_001",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SFX_Hit_001",
+      "GUID": "{632FA10C-2874-4BB8-A72C-48A6E982CE99}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "656669019"
+       }
+      ]
+     },
+     {
+      "Id": "1856456021",
+      "Name": "Play_SFX_Lanepress",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SFX_Lanepress",
+      "GUID": "{866D99F3-ECFC-43EF-837E-118A017A7413}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "766390380"
+       }
+      ]
+     },
+     {
+      "Id": "17380391",
+      "Name": "Play_SFX_Miss_000",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SFX_Miss_000",
+      "GUID": "{7BBE52D5-9261-4BEC-8855-4081200ECCF6}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "450067902"
+       }
+      ]
+     },
+     {
+      "Id": "4014817549",
+      "Name": "Play_SFX_Strum",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SFX_Strum",
+      "GUID": "{2E436B12-A32F-4857-8157-D39267C1FB5A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "3504421513",
+      "Name": "Play_SFX_UI_Click",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_SFX_UI_Click",
+      "GUID": "{E263532B-C3B1-4B48-AB87-4C5F5819A095}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5",
+      "DurationMax": "0.5",
+      "MediaRefs": [
+       {
+        "Id": "125062013"
+       }
+      ]
+     },
+     {
+      "Id": "2659419889",
+      "Name": "Stop_Music_Incubus_Privilege",
+      "ObjectPath": "\\Events\\Default Work Unit\\MusicControl\\Stop_Music_Incubus_Privilege",
+      "GUID": "{52C79FDB-5145-4F36-88B8-4CEAFFBB1687}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "2455186356",
+      "Name": "RTPC_Music_GuitarLayer",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\RTPC_Music_GuitarLayer",
+      "GUID": "{39DA9122-5576-4D72-8268-0C0788B53327}"
+     }
+    ]
    }
   ],
-  "FileHash": "{91AB2D65-D22E-F72C-C029-FAA0E670D48B}"
+  "FileHash": "{0C67B752-9DB1-AF1A-38DD-7F0CB1CA1EEE}"
  }
 }

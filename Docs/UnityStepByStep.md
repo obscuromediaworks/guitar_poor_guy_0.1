@@ -84,3 +84,8 @@ Sigue `Docs/LanesAndChartToolStepByStep.md` para montar carriles visuales person
 ## 11) Reinicio rápido en Play Mode
 
 En `SongSessionController` deja activo `Enable Quick Restart` y usa `Restart Key` (default `R`) para reiniciar la sesión sin salir de Play Mode.
+
+
+## 12) WwiseAudioService detallado
+
+Sigue `Docs/WwiseAudioServiceStepByStep.md` para mapear todos los eventos/RTPC en Unity sin perder detalles de wiring.

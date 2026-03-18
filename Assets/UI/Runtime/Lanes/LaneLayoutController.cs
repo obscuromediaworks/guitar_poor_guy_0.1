@@ -80,7 +80,6 @@ namespace GuitarPoorGuy.UI.Lanes
 
                 var zoneImage = zoneObject.GetComponent<Image>();
                 zoneImage.color = theme.validationZoneColor;
-                zoneObject.transform.SetSiblingIndex(Mathf.Max(0, zoneObject.transform.GetSiblingIndex() - 1));
             }
 
             var hitLineObject = new GameObject("HitLine", typeof(RectTransform), typeof(Image));

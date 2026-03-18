@@ -21,10 +21,12 @@ namespace GuitarPoorGuy.Gameplay.Session
         [SerializeField] private SongTimeSource timeSource;
         [SerializeField] private MonoBehaviour audioServiceBehaviour;
         [SerializeField] private MonoBehaviour laneInputSourceBehaviour;
+        [SerializeField] private UI.Lanes.CountdownSequenceUI countdownSequenceUI;
 
         [Header("Session")]
         [SerializeField] private bool enableQuickRestart = true;
         [SerializeField] private Key restartKey = Key.R;
+        [SerializeField] private float gameplayTimingDelayMs = 0f;
 
         [Header("Judge Windows")]
         [SerializeField] private double perfectWindowMs = 40;
@@ -72,6 +74,7 @@ namespace GuitarPoorGuy.Gameplay.Session
             }
 
             _activeSongId = ResolveSongId();
+            ResolveTimingDelay();
 
             if (_laneInputSource == null)
             {
@@ -182,6 +185,20 @@ namespace GuitarPoorGuy.Gameplay.Session
             return "song_001";
         }
 
+
+        private void ResolveTimingDelay()
+        {
+            if (countdownSequenceUI == null)
+            {
+                countdownSequenceUI = FindFirstObjectByType<UI.Lanes.CountdownSequenceUI>();
+            }
+
+            if (countdownSequenceUI != null && gameplayTimingDelayMs <= 0f)
+            {
+                gameplayTimingDelayMs = countdownSequenceUI.TotalDurationSeconds * 1000f;
+            }
+        }
+
         private void HandleQuickRestart()
         {
             if (!enableQuickRestart)
@@ -232,7 +249,8 @@ namespace GuitarPoorGuy.Gameplay.Session
                 return;
             }
 
-            var quality = _judge.Evaluate(note.timeMs, timeSource.SongTimeMs);
+            var expectedTimeMs = note.timeMs + gameplayTimingDelayMs;
+            var quality = _judge.Evaluate(expectedTimeMs, timeSource.SongTimeMs);
             Register(quality);
             _laneCursor[lane]++;
             LaneNoteConsumed?.Invoke(lane, quality);

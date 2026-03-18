@@ -15,6 +15,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
         private readonly List<RectTransform> _activeNoteRects = new List<RectTransform>();
         private readonly List<float> _activeNoteTimes = new List<float>();
+        private readonly List<bool> _consumedFlags = new List<bool>();
         private readonly List<Queue<RectTransform>> _laneQueues = new List<Queue<RectTransform>>();
 
         private bool _built;
@@ -57,12 +58,12 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             var theme = laneLayoutController.Theme;
-            var nowMs = (float)sessionController.CurrentSongTimeMs - Mathf.Max(0f, noteFallStartDelayMs);
+            var nowMs = (float)sessionController.CurrentSongTimeMs;
 
             for (var i = 0; i < _activeNoteRects.Count; i++)
             {
                 var noteRect = _activeNoteRects[i];
-                if (noteRect == null)
+                if (noteRect == null || _consumedFlags[i])
                 {
                     continue;
                 }
@@ -151,10 +152,23 @@ namespace GuitarPoorGuy.UI.Lanes
             }
 
             var consumedNote = _laneQueues[lane].Dequeue();
-            if (consumedNote != null)
+            if (consumedNote == null)
             {
-                consumedNote.gameObject.SetActive(false);
+                return;
             }
+
+            for (var i = 0; i < _activeNoteRects.Count; i++)
+            {
+                if (_activeNoteRects[i] != consumedNote)
+                {
+                    continue;
+                }
+
+                _consumedFlags[i] = true;
+                break;
+            }
+
+            consumedNote.gameObject.SetActive(false);
         }
 
         private void TryBuildNotesPeriodically()
@@ -230,6 +244,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
                 _activeNoteRects.Add(noteRect);
                 _activeNoteTimes.Add(note.timeMs);
+                _consumedFlags.Add(false);
                 _laneQueues[note.lane].Enqueue(noteRect);
             }
 
@@ -267,6 +282,7 @@ namespace GuitarPoorGuy.UI.Lanes
 
             _activeNoteRects.Clear();
             _activeNoteTimes.Clear();
+            _consumedFlags.Clear();
             _laneQueues.Clear();
             _built = false;
         }

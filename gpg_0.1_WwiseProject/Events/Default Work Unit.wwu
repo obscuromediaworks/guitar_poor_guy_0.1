@@ -78,6 +78,7 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_SFX_Strum" ID="{2E436B12-A32F-4857-8157-D39267C1FB5A}"/>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -1,0 +1,233 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Chart_song_001
+  m_EditorClassIdentifier: Assembly-CSharp:GuitarPoorGuy.Gameplay.Data:ChartSource
+  chartJson: "{\r\n  \"formatVersion\": 1,\r\n  \"songId\": \"song_001\",\r\n  \"bpm\":
+    120,\r\n  \"offsetMs\": 0,\r\n  \"notes\": [\r\n    {\r\n      \"timeMs\": 1000,\r\n     
+    \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    1450,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 1750,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 2050,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 2350,\r\n      \"lane\": 4,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 2650,\r\n      \"lane\": 0,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 2950,\r\n      \"lane\":
+    1,\r\n      \"type\": \"sustain\",\r\n      \"durationMs\": 800\r\n    },\r\n   
+    {\r\n      \"timeMs\": 3250,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 3550,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 4000,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 4300,\r\n      \"lane\":
+    0,\r\n      \"type\": \"chord\",\r\n      \"chordLanes\": [\r\n        0,\r\n       
+    2\r\n      ]\r\n    },\r\n    {\r\n      \"timeMs\": 4600,\r\n      \"lane\":
+    1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 4900,\r\n     
+    \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    5200,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 5500,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 5800,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 6100,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 6550,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 6850,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 7150,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    7450,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 7750,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 8050,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 8350,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 8650,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"sustain\",\r\n      \"durationMs\": 500\r\n    },\r\n    {\r\n     
+    \"timeMs\": 9100,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 9400,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 9700,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 10000,\r\n      \"lane\": 3,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 10300,\r\n      \"lane\":
+    4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 10600,\r\n     
+    \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    10900,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 11200,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 11650,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 11950,\r\n      \"lane\": 4,\r\n      \"type\":
+    \"chord\",\r\n      \"chordLanes\": [\r\n        1,\r\n        4\r\n      ]\r\n   
+    },\r\n    {\r\n      \"timeMs\": 12250,\r\n      \"lane\": 0,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 12550,\r\n      \"lane\": 1,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 12850,\r\n      \"lane\":
+    2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 13150,\r\n     
+    \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    13450,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 13750,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 14200,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 14500,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"sustain\",\r\n      \"durationMs\": 800\r\n    },\r\n    {\r\n      \"timeMs\":
+    14800,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 15100,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 15400,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 15700,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 16000,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 16300,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 16750,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    17050,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 17350,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 17650,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 17950,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 18250,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 18550,\r\n      \"lane\":
+    0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 18850,\r\n     
+    \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    19300,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 19600,\r\n      \"lane\": 3,\r\n      \"type\": \"chord\",\r\n     
+    \"chordLanes\": [\r\n        0,\r\n        3\r\n      ]\r\n    },\r\n    {\r\n     
+    \"timeMs\": 19900,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 20200,\r\n      \"lane\": 0,\r\n      \"type\": \"sustain\",\r\n     
+    \"durationMs\": 500\r\n    },\r\n    {\r\n      \"timeMs\": 20500,\r\n      \"lane\":
+    1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 20800,\r\n     
+    \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    21100,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 21400,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 21850,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 22150,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 22450,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 22750,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 23050,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    23350,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 23650,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 23950,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 24400,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 24700,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 25000,\r\n      \"lane\":
+    0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 25300,\r\n     
+    \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    25600,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 25900,\r\n      \"lane\": 3,\r\n      \"type\": \"sustain\",\r\n     
+    \"durationMs\": 800\r\n    },\r\n    {\r\n      \"timeMs\": 26200,\r\n      \"lane\":
+    4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 26500,\r\n     
+    \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    26950,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 27250,\r\n      \"lane\": 2,\r\n      \"type\": \"chord\",\r\n     
+    \"chordLanes\": [\r\n        2,\r\n        4\r\n      ]\r\n    },\r\n    {\r\n     
+    \"timeMs\": 27550,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 27850,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 28150,\r\n      \"lane\": 0,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 28450,\r\n      \"lane\": 1,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 28750,\r\n      \"lane\":
+    2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 29050,\r\n     
+    \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    29500,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 29800,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 30100,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 30400,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 30700,\r\n      \"lane\": 3,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 31000,\r\n      \"lane\":
+    4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 31300,\r\n     
+    \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    31600,\r\n      \"lane\": 1,\r\n      \"type\": \"sustain\",\r\n      \"durationMs\":
+    500\r\n    },\r\n    {\r\n      \"timeMs\": 32050,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 32350,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 32650,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    32950,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 33250,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 33550,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 33850,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 34150,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 34600,\r\n      \"lane\":
+    0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 34900,\r\n     
+    \"lane\": 1,\r\n      \"type\": \"chord\",\r\n      \"chordLanes\": [\r\n       
+    1,\r\n        3\r\n      ]\r\n    },\r\n    {\r\n      \"timeMs\": 35200,\r\n     
+    \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    35500,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 35800,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 36100,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 36400,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 36700,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 37150,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 37450,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"sustain\",\r\n      \"durationMs\": 800\r\n   
+    },\r\n    {\r\n      \"timeMs\": 37750,\r\n      \"lane\": 0,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 38050,\r\n      \"lane\": 1,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 38350,\r\n      \"lane\":
+    2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 38650,\r\n     
+    \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    38950,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 39250,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 39700,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 40000,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 40300,\r\n      \"lane\": 3,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 40600,\r\n      \"lane\":
+    4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 40900,\r\n     
+    \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    41200,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 41500,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 41800,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 42250,\r\n      \"lane\": 4,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 42550,\r\n      \"lane\": 0,\r\n     
+    \"type\": \"chord\",\r\n      \"chordLanes\": [\r\n        0,\r\n        2\r\n     
+    ]\r\n    },\r\n    {\r\n      \"timeMs\": 42850,\r\n      \"lane\": 1,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 43150,\r\n      \"lane\":
+    2,\r\n      \"type\": \"sustain\",\r\n      \"durationMs\": 500\r\n    },\r\n   
+    {\r\n      \"timeMs\": 43450,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 43750,\r\n      \"lane\": 4,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 44050,\r\n      \"lane\": 0,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 44350,\r\n      \"lane\":
+    1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 44800,\r\n     
+    \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    45100,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 45400,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 45700,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 46000,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 46300,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 46600,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 46900,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    47350,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 47650,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 47950,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 48250,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 48550,\r\n      \"lane\": 4,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 48850,\r\n      \"lane\":
+    0,\r\n      \"type\": \"sustain\",\r\n      \"durationMs\": 800\r\n    },\r\n   
+    {\r\n      \"timeMs\": 49150,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 49450,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 49900,\r\n      \"lane\": 3,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 50200,\r\n      \"lane\":
+    4,\r\n      \"type\": \"chord\",\r\n      \"chordLanes\": [\r\n        1,\r\n       
+    4\r\n      ]\r\n    },\r\n    {\r\n      \"timeMs\": 50500,\r\n      \"lane\":
+    0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 50800,\r\n     
+    \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    51100,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 51400,\r\n      \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 51700,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 52000,\r\n      \"lane\": 0,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 52450,\r\n      \"lane\": 1,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 52750,\r\n      \"lane\":
+    2,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 53050,\r\n     
+    \"lane\": 3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    53350,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 53650,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 53950,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 54250,\r\n      \"lane\": 2,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 54550,\r\n      \"lane\": 3,\r\n     
+    \"type\": \"sustain\",\r\n      \"durationMs\": 500\r\n    },\r\n    {\r\n     
+    \"timeMs\": 55000,\r\n      \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 55300,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 55600,\r\n      \"lane\": 1,\r\n      \"type\":
+    \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 55900,\r\n      \"lane\": 2,\r\n     
+    \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 56200,\r\n      \"lane\":
+    3,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\": 56500,\r\n     
+    \"lane\": 4,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n      \"timeMs\":
+    56800,\r\n      \"lane\": 0,\r\n      \"type\": \"tap\"\r\n    },\r\n    {\r\n     
+    \"timeMs\": 57100,\r\n      \"lane\": 1,\r\n      \"type\": \"tap\"\r\n    },\r\n   
+    {\r\n      \"timeMs\": 57550,\r\n      \"lane\": 2,\r\n      \"type\": \"tap\"\r\n   
+    },\r\n    {\r\n      \"timeMs\": 57850,\r\n      \"lane\": 3,\r\n      \"type\":
+    \"chord\",\r\n      \"chordLanes\": [\r\n        0,\r\n        3\r\n      ]\r\n   
+    },\r\n    {\r\n      \"timeMs\": 58150,\r\n      \"lane\": 4,\r\n      \"type\":
+    \"tap\"\r\n    }\r\n  ]\r\n}\r\n"

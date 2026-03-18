@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{6A98A547-F655-4C74-9780-2B0C1E9FD76F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="MusicControl" ID="{896456C6-8CAB-4C86-96CD-2D7B1DE77D83}" ShortID="291451191">
+					<ChildrenList>
+						<Event Name="Play_Music_Incubus_Privilege" ID="{E6DE7C92-BF59-4494-B642-9F3BEE507C4C}">
+							<ChildrenList>
+								<Action Name="" ID="{00B603B7-C714-4830-96DB-F6D86464F8B3}" ShortID="826124395">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Incubus_Privilege" ID="{FAEF3C82-C470-48EE-87E7-B2D5B46DC0CE}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music_Incubus_Privilege" ID="{52C79FDB-5145-4F36-88B8-4CEAFFBB1687}">
+							<ChildrenList>
+								<Action Name="" ID="{E90BD54C-6725-47BE-A2B3-7822AF712B6F}" ShortID="54513027">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Incubus_Privilege" ID="{FAEF3C82-C470-48EE-87E7-B2D5B46DC0CE}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="SFX" ID="{36305D33-BB41-4CE9-BC35-56CB13B796CF}" ShortID="729291389">
+					<ChildrenList>
+						<Event Name="Play_SFX_UI_Click" ID="{E263532B-C3B1-4B48-AB87-4C5F5819A095}">
+							<ChildrenList>
+								<Action Name="" ID="{BF4BDCDD-7563-4614-9317-5F5B4732788B}" ShortID="551266009">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_UI_Click" ID="{72F0B615-7A60-4BE8-948C-5ACB2358FE14}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SFX_Miss_000" ID="{7BBE52D5-9261-4BEC-8855-4081200ECCF6}">
+							<ChildrenList>
+								<Action Name="" ID="{BD911225-2A70-470E-BF5F-58C14416D78F}" ShortID="1038233365">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Miss_000" ID="{46A75401-F330-4ADA-96E7-380CB74A97B9}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SFX_Hit_001" ID="{632FA10C-2874-4BB8-A72C-48A6E982CE99}">
+							<ChildrenList>
+								<Action Name="" ID="{85082960-C564-4D72-8487-37803AFA20CE}" ShortID="201945712">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Hit_001" ID="{1C7CD3BD-031B-48CB-806B-1FA55A68E7DF}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SFX_Lanepress" ID="{866D99F3-ECFC-43EF-837E-118A017A7413}">
+							<ChildrenList>
+								<Action Name="" ID="{1D775C2F-4161-4E58-BBC5-FCD0767F8F35}" ShortID="607237983">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="SFX_Lanepress" ID="{245AB43D-E036-4FE3-8C9E-A890552A427B}" WorkUnitID="{84C2CDB9-C58E-498F-B05C-7F7D905FF5B8}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_SFX_Strum" ID="{2E436B12-A32F-4857-8157-D39267C1FB5A}"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

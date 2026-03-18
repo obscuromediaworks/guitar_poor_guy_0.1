@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{91DA55D4-8D03-4FA9-85B9-09A74CED2E44}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{91DA55D4-8D03-4FA9-85B9-09A74CED2E44}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="HitQuality" ID="{8482248B-CE38-4238-A274-59CFB6512F03}">
+					<ChildrenList>
+						<Switch Name="Perfect" ID="{A7F90AEE-4BCB-4D94-A2C3-B01192887E02}"/>
+						<Switch Name="Good" ID="{62C7E77B-904F-4F88-89F0-9B008133FA37}"/>
+						<Switch Name="Miss" ID="{EE1BEC3D-C55E-484C-BF9E-9A9848481BDC}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

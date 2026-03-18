@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{19B17385-B840-485E-998A-3BFA5F39C0B7}" SchemaVersion="133">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{19B17385-B840-485E-998A-3BFA5F39C0B7}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="RTPC_Music_GuitarLayer" ID="{39DA9122-5576-4D72-8268-0C0788B53327}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
